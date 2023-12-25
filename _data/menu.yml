@@ -1,0 +1,10 @@
+# To add links to the navigation bar.
+- example:
+  title: Example
+  url: https://example.com
+  hide: true
+  position: 2
+- air_lab:
+  title: "AIR Lab Homepage"
+  url: https://air.changwon.ac.kr 
+  position: 1
