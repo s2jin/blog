@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/homepage"
+baseurl: "/blog"
 url: "https://s2jin.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
