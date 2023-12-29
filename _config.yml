@@ -27,7 +27,7 @@ katex: true                                             # Enable if using math m
 mermaid: default                                        # Enable mermaid-js for diagrams, use theme: base, forest, dark, default, neutral
 google_analytics:                                       # Measurement ID, e.g. "G-00000"
 cookie_consent: false                                   # To respect the usage of cookies
-color_theme: light                                       # auto, dark or light
+color_theme: auto                                       # auto, dark or light
 
 # Comments options
 comments:
