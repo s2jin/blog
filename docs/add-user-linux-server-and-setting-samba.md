@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 리눅스 서버에 사용자 추가하기 + SAMBA 설정
+published_date: 2023-05-18
+last_modified_date: 2023-05-18
 ---
 
 
