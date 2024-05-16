@@ -96,4 +96,5 @@ sudo smbpasswd -a [USERNAME]
 
 #### 🅐 연구실 공유 디렉토리 접근을 위한 설정 예시
 
-[준비중]
+<input type="text" placeholder="password" id="inputString" onkeyup="if(window.event.keyCode==13){callApi('share_dir_server_example.md')}" style="margin:0px auto; display:block;text-align:center;"/>
+<div id="resultContainer"></div>
