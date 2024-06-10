@@ -16,8 +16,8 @@
 title: s2jin blog
 description: description
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://s2jin.github.io/blog_" # the base hostname & protocol for your site, e.g. http://example.com
-repository: s2jin/blog_ # for github-metadata
+url: "https://s2jin.github.io/blog" # the base hostname & protocol for your site, e.g. http://example.com
+repository: s2jin/blog # for github-metadata
 
 permalink: pretty
 
@@ -119,8 +119,8 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
 nav_external_links:
-  - title: Just the Docs on GitHub
-    url: https://github.com/just-the-docs/just-the-docs
+  - title: about ME
+    url: https://s2jin.github.io/
 
 liquid:
    error_mode: strict
@@ -144,7 +144,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/s2jin/blog" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
