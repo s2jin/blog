@@ -1,0 +1,2754 @@
+<!doctype html>
+<html style='font-size:17px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: medium !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* roboto-300 - latin */
+/* roboto-300italic - latin */
+/* roboto-regular - latin */
+/* roboto-italic - latin */
+/* roboto-500 - latin */
+/* roboto-500italic - latin */
+/* roboto-700 - latin */
+/* roboto-700italic - latin */
+/* roboto-900 - latin */
+/* roboto-900italic - latin */
+/* sorucecodepro-400 - latin */
+@font-face {
+     font-family: 'Source Code Pro';
+     font-style: normal;
+     font-weight: 400;
+     src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+     url('file:///Users/sujin/Library/Application%20Support/abnerworks.Typora/themes/gitbook/SourceCodePro-Regular.ttf') format('truetype');
+}@import "";
+
+/*by 16soundsofsilence, yes this code is an absolute mess*/
+
+:root {
+    --bg-color: white;
+    --side-bar-bg-color: #f5f7f9;
+    --control-text-color: #3b454e;
+    --primary-color: #15ac8e;
+    --primary-btn-border-color: #15ac8e;
+    --active-file-bg-color: #e6ecf1;
+    --active-file-text-color: inherit;
+    --active-file-border-color: #15ac8e;
+    --item-hover-text-color: #242a31;
+    --item-hover-bg-color: #f5f7f9;
+    --window-border: 1px solid #e6ecf1;
+    --select-text-font-color: white;
+    --select-text-bg-color: #11977d;
+
+    --md-char-color: #9daab6;
+    --heading-char-color: #9daab6;
+    --meta-content-color: #15ac8e;
+
+    --borders: #e6ecf1;
+    --table-border-color: #e6ecf1;
+    --boxes: #f5f7f9;
+    --boxes-darker: #d8e0e7;
+    --boxes-darker2: #bac2c9;
+    --boxes-darkest: #9daab6;
+    --drag-placeholder-color: #d8e0e7;
+
+    --text-color: #3b454e;
+    --heading-text-color: #242a31;
+    --light-text-color: #9daab6;
+    --light-text-color-darker: #74818d;
+    --codeboxes: #183055;
+    --codeboxes-lighter: #1c375f;
+    --rawblock-edit-panel-bd: transparent;
+
+    --primary-color-darkest: #083d33;
+    --primary-color-darker2: #0d5748;
+    --primary-color-darker: #11977d;
+    --focus-ring-color: #15ac8e;
+
+    --danger-color: rgb(255, 70, 66);
+
+    --node-fill: #ececff;
+    --node-border: #ccccff;
+    --cluster-fill: #ffffde;
+    --cluster-border: #aaaa33;
+    --note-fill: #fff5ad;
+    --note-border: #aaaa33;
+
+    /*****************************/
+
+    --font-family: "Roboto", sans-serif;
+    --code-font-family: "Source Code Pro";
+    --monospace: "Source Code Pro";
+}
+
+html,
+.form-control,
+.modal {
+    font-size: 16px;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: #3b454e;
+    line-height: 1.6rem;
+    height: 100%;
+}
+
+#write {
+    font-size: 0.95rem;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 30px;
+    padding-bottom: 100px;
+    position: static;
+    width: 100%;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+a:hover {
+    color: var(--primary-color-darker);
+}
+
+mark a,
+mark .md-content.md-url {
+    color: var(--primary-color-darker2);
+}
+
+mark a:hover {
+    color: var(--primary-color-darkest);
+}
+
+.ty-preferences a {
+    color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    color: var(--heading-text-color);
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+    border-bottom: solid 1px var(--borders);
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#write > h1.md-focus:before {
+    content: "h1";
+    top: 1.15rem;
+    left: -1.75rem;
+}
+
+#write > h2.md-focus:before {
+    content: "h2";
+    top: 0.75rem;
+    left: -1.75rem;
+}
+
+#write > h3.md-focus:before {
+    content: "h3";
+    top: 0.575rem;
+    left: -1.75rem;
+}
+
+#write > h4.md-focus:before {
+    content: "h4";
+    top: 0.4rem;
+    left: -1.75rem;
+}
+
+#write > h5.md-focus:before {
+    content: "h5";
+    top: 0.25rem;
+    left: -1.75rem;
+}
+
+#write > h6.md-focus:before {
+    content: "h6";
+    top: 0.25rem;
+    left: -1.75rem;
+}
+
+#write > h1.md-focus:before,
+#write > h2.md-focus:before,
+#write > h3.md-focus:before,
+#write > h4.md-focus:before,
+#write > h5.md-focus:before,
+#write > h6.md-focus:before {
+    color: var(--light-text-color);
+    border: none;
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0px;
+    line-height: 1;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+    margin-top: 0rem;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl {
+    margin: 0.5rem 0rem 1.5rem 0rem;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 1px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--borders);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.md-blockmeta {
+    color: var(--md-char-color);
+}
+
+mark {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/*BLOCKQUOTE*/
+
+blockquote {
+    width: 100%;
+    background-color: var(--boxes);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    border-right: 4px solid var(--boxes); /* removes arc with tiny blue color from top-right and bottom-right corner */
+}
+
+blockquote blockquote {
+    padding-right: 0;
+}
+
+/*TABLE*/
+
+table {
+    font-size: 0.875rem;
+    padding: 0;
+    margin: 1.5rem 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
+    margin: 0;
+    padding: 0;
+}
+
+table tr.md-end-block {
+    border-top: none;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tr th {
+    font-weight: bold;
+    border: none;
+    border-bottom: solid 2px var(--borders);
+    margin: 0;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+table tr td {
+    border: none;
+    margin: 0;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+#write table tr td:hover,
+#write table tr th:hover {
+    background-color: var(--boxes);
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+/*OTHER TABLE THINGS*/
+
+.ty-table-edit {
+    background-color: var(--boxes);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    box-shadow: none;
+    transform: translateY(2.5rem);
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+
+.ty-table-edit + .md-table {
+    margin-top: 3rem;
+}
+
+.ty-table-edit:active,
+.ty-table-edit:focus {
+    box-shadow: none;
+}
+
+.popover,
+.popover:active,
+.popover:focus {
+    border: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-radius: 0.3rem;
+}
+
+.popover .arrow {
+    border-bottom-color: var(--borders);
+}
+
+.md-grid-board a {
+    background-color: transparent;
+    border-color: var(--borders);
+    border-radius: 2px;
+}
+
+.md-grid-board .md-grid-ext {
+    background-color: var(--borders);
+    border-radius: 2px;
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext {
+    background: none;
+    border-radius: 6px;
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext a {
+    background-color: var(--boxes-darker2);
+    border-color: var(--boxes-darker2);
+}
+
+.md-grid-board tr[row="1"] td {
+    background-color: var(--bg-color);
+    border-color: var(--borders);
+}
+
+.md-grid-board a.md-active,
+.md-grid-board a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.md-grid-board tr[row="1"] a.md-active,
+.md-grid-board tr[row="1"] a:hover {
+    background-color: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+}
+
+#md-grid-width,
+#md-grid-height {
+    border-radius: 0.3rem;
+    border-color: var(--borders);
+    transition-duration: 0.3s;
+    transition-property: border-color;
+}
+
+#md-grid-width:focus,
+#md-grid-height:focus {
+    border-radius: 0.3rem;
+    border-color: var(--primary-color);
+}
+
+/** source code mode */
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+/*DIAGRAMS*/
+
+.md-diagram-panel {
+    color: var(--text-color);
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+}
+
+.md-diagram-panel text,
+.md-diagram-panel .label {
+    color: var(--text-color);
+}
+
+.md-diagram-panel text {
+    fill: var(--text-color) !important /*required*/;
+}
+
+.md-diagram-panel-error {
+    color: var(--danger-color);
+}
+
+/*CHECKBOXES*/
+
+.md-task-list-item > input:before,
+input[type="checkbox"]:before {
+    border-radius: 0.2rem;
+    margin-top: -0.08rem;
+    margin-left: -0.1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--borders);
+    content: " ";
+    display: block;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+.md-task-list-item:hover > input:before,
+input[type="checkbox"]:hover:before {
+    background-color: var(--boxes-darker);
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before,
+input[type="checkbox"]:checked:before {
+    background-color: var(--primary-color);
+}
+
+.md-task-list-item:hover > input:checked:before,
+.md-task-list-item:hover > input[checked]:before,
+input[type="checkbox"]:hover:checked:before {
+    background-color: var(--primary-color-darker);
+}
+
+.md-task-list-item > input:after,
+.md-task-list-item > input:after,
+input[type="checkbox"]:after {
+    transform: rotate(-45deg);
+    position: absolute;
+    border: 2px solid white;
+    border-top: 0;
+    border-right: 0;
+    top: 0.16rem;
+    left: 0.1rem;
+    width: 0.6rem;
+    height: 0.375rem;
+    content: " ";
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after,
+input[type="checkbox"]:checked:after {
+    opacity: 1;
+}
+
+.ty-preferences input[type="checkbox"]:before {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.ty-preferences input[type="checkbox"]:after {
+    width: 0.5rem;
+    height: 0.32rem;
+    top: 0.19rem;
+    left: 0.14rem;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    line-height: 1.45;
+    background-color: var(--boxes);
+    border: 0;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    border-left: solid 4px var(--boxes-darkest);
+}
+
+#write pre.md-meta-block:empty:before {
+    color: var(--light-text-color);
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: var(--md-char-color);
+    opacity: 1;
+}
+
+/*TOC*/
+
+.md-toc {
+    margin: 1.5rem 0rem;
+}
+
+.md-toc:focus .md-toc-content {
+    border: none;
+}
+
+#write div.md-toc-tooltip {
+    background-color: var(--boxes);
+    line-height: 1.6rem;
+    padding: 0.3rem 0.75rem;
+    border-top: none;
+    border-radius: 0.3rem;
+}
+
+.md-toc.md-focus {
+    margin-top: 4.5rem;
+}
+
+#write div.md-toc-tooltip + .md-toc-content {
+    padding-top: 1rem;
+}
+
+.md-delete-toc {
+    padding: 0px;
+}
+
+/*MATH*/
+
+.md-rawblock-container {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.md-rawblock:hover .md-rawblock-container {
+    background-color: var(--boxes);
+}
+
+.md-rawblock:active .md-rawblock-container {
+    background-color: var(--boxes-darker);
+}
+
+.MathJax_SVG:focus {
+    outline: none;
+}
+
+.md-rawblock-panel,
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 0.3rem;
+    background-color: var(--boxes);
+}
+
+.md-rawblock-panel .code-tooltip {
+    box-shadow: none;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.md-rawblock-panel .CodeMirror-linenumber {
+    color: var(--light-text-color);
+    opacity: 1;
+}
+
+.md-rawblock-panel .CodeMirror div.CodeMirror-cursor {
+    border-left: solid 1px var(--text-color);
+}
+
+.md-mathblock-panel .md-mathjax-preview,
+.mathjax-candidate {
+    border-top: solid 1px var(--borders);
+}
+
+.md-rawblock-after,
+.md-rawblock-before {
+    cursor: default;
+    color: var(--light-text-color);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.md-rawblock-tooltip-name {
+    font-size: 13px;
+    color: var(--light-text-color);
+    opacity: 1;
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip {
+    padding-right: 0px;
+}
+
+.md-rawblock-input span.cm-tag {
+    color: #0bb6ad;
+}
+
+.md-rawblock-input span.cm-atom,
+.md-inline-math script {
+    color: #b61ed4;
+}
+
+.md-rawblock-input span.cm-number {
+    color: #ec7200;
+}
+
+.md-rawblock-input span.cm-keyword {
+    color: #156db6;
+}
+
+.md-mathblock-input span.cm-bracket {
+    color: var(--light-text-color);
+}
+
+#math-inline-preview.code-tooltip {
+    border-radius: 0.3rem;
+    background-color: var(--bg-color);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    color: var(--text-color);
+    opacity: 1;
+}
+
+#math-inline-preview.code-tooltip .code-tooltip-content {
+    border: solid 1px var(--borders);
+}
+
+#math-inline-preview.code-tooltip .md-arrow:after {
+    background-color: var(--bg-color);
+    border: solid 1px var(--borders);
+    box-shadow: none;
+}
+
+/*FOOTER*/
+
+footer.ty-footer {
+    border: none;
+}
+
+.footer-item {
+    opacity: 1 !important;
+    color: var(--light-text-color);
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+#outline-btn:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+/*SIDEBAR*/
+
+#typora-sidebar {
+    border-right: solid 1px var(--borders);
+}
+
+.info-panel-tab {
+    opacity: 1;
+}
+
+.sidebar-tab {
+    text-transform: capitalize;
+    color: var(--light-text-color);
+}
+
+.info-panel-tab-border {
+    color: var(--primary-color);
+    border-radius: 2px;
+}
+
+#ty-sidebar-search-back-btn {
+    margin: auto;
+}
+
+.ty-show-outline-filter #file-library-search,
+.ty-show-search #file-library-search {
+    height: 4rem;
+}
+
+#file-library-search-input {
+    height: 2rem;
+}
+
+#file-library-search-panel input {
+    margin-top: 8px !important;
+}
+
+.ty-sidebar-search-panel .searchpanel-search-option-btn,
+#ty-sidebar-search-tabs .searchpanel-search-option-btn {
+    top: 15px;
+}
+
+#typora-sidebar #filesearch-case-ion-btn,
+#typora-sidebar #filesearch-word-ion-btn {
+    background: none;
+    margin-top: 0.45rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#typora-sidebar #filesearch-case-ion-btn:hover,
+#typora-sidebar #filesearch-word-ion-btn:hover {
+    color: var(--primary-color);
+}
+
+/*sidebar loading*/
+
+#typora-sidebar #sidebar-loading-template {
+    padding: 0px;
+}
+
+#typora-sidebar #sidebar-loading-template .typora-search-spinner {
+    opacity: 1;
+    color: var(--light-text-color-darker);
+}
+
+#typora-sidebar #sidebar-loading-template .typora-quick-open-info {
+    color: var(--light-text-color-darker);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*sidebar outline*/
+
+#close-outline-filter-btn {
+    top: 15px;
+    opacity: 1;
+    color: var(--light-text-color) !important;
+}
+
+#close-outline-filter-btn:hover {
+    color: var(--primary-color) !important;
+    background-color: transparent !important;
+}
+
+#close-outline-filter-btn:active {
+    background-color: transparent !important;
+}
+
+#outline-content {
+    padding-right: 0px;
+    line-height: 1rem;
+}
+
+.outline-item {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.outline-item .outline-label {
+    display: block;
+    width: 100%;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-right: solid 2px transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--light-text-color-darker);
+}
+
+.outline-item:hover {
+    background: none;
+}
+
+.outline-item:hover .outline-label {
+    color: var(--primary-color);
+}
+
+.outline-label:hover {
+    text-decoration: none;
+}
+
+.outline-active.outline-label {
+    border-right: solid 2px var(--primary-color);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.outline-expander {
+    padding-top: 0.4rem;
+    padding-right: 0.5rem;
+}
+
+#toc-dropmenu .outline-label {
+    line-height: 1rem;
+}
+
+#toc .outline-title {
+    margin-top: 9px;
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+#pin-outline-btn {
+    padding: 14px 18px 0px 0px;
+}
+
+/*sidebar file-list and search results*/
+
+#file-library-list[data-state="complete"] #sidebar-loading-template {
+    padding: 0rem;
+}
+
+#typora-sidebar .file-list-item,
+.ty-search-item {
+    border: none;
+    padding: 1rem;
+}
+
+body.html-for-mac #typora-sidebar .file-list-item,
+body.html-for-mac .ty-search-item {
+    transition-duration: 0.3s !important;
+    transition-property: background-color, border, color, height !important;
+}
+
+#typora-sidebar .file-list-item:hover,
+.ty-search-item:hover {
+    background: var(--borders);
+}
+
+#typora-sidebar .ty-search-item-line {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin-left: 24px;
+}
+
+body.html-for-mac #typora-sidebar .ty-search-item-line {
+    transition-duration: 0.2s;
+}
+
+#typora-sidebar .ty-search-item-line * {
+    opacity: 1;
+}
+
+#typora-sidebar .ty-search-item .ty-search-item-line:hover,
+#typora-sidebar .ty-search-item-line.active {
+    background-color: var(--select-text-bg-color);
+    color: white;
+} /* makes easier identifying which searched item is active in the sidebar */
+
+#typora-sidebar .file-list-item-file-name {
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+    line-height: 1.8rem;
+    float: right;
+}
+
+#typora-sidebar .file-list-item-file-ext-part {
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+#typora-sidebar .file-list-item-parent-loc,
+#typora-sidebar .file-list-item-time {
+    font-family: var(--font-family);
+    font-weight: 400;
+    opacity: 0.5;
+    display: block;
+}
+
+#typora-sidebar .file-list-item-summary {
+    float: left;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+#typora-sidebar input.file-list-item-file-name {
+    margin: 0.5rem 0rem 0.5rem 0.7rem;
+    padding: 0.4rem !important;
+    line-height: 1rem;
+    float: right;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    background-color: white !important;
+}
+
+#typora-sidebar .file-list-item-count {
+    font-size: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.2rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    text-align: center;
+    line-height: 1.25rem;
+    position: relative;
+    top: 0.3rem;
+}
+
+#typora-sidebar .file-list-item.file-library-file-node {
+    border: none;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-background,
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .ty-search-item.active {
+    background-color: white;
+    outline: 1px solid var(--borders);
+    border: none;
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-content {
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node {
+    padding: 0rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 0.8rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-content {
+    padding: 0rem;
+    line-height: 2.2rem;
+    height: 2.2rem;
+    background: none;
+    margin-bottom: 0px;
+}
+
+#typora-sidebar .file-tree-node .file-node-background {
+    padding: 0rem;
+    height: 2.2rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon {
+    margin-right: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-file-text-o {
+    margin-top: 0.33rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-folder {
+    margin-top: 0.36rem;
+}
+
+#typora-sidebar .file-tree-node .fa-caret-down,
+#typora-sidebar .file-tree-node .fa-caret-right {
+    position: relative;
+    top: 5px;
+}
+
+#typora-sidebar .file-tree-node .file-tree-rename-input {
+    height: 2.2rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0rem;
+    padding-left: 0rem;
+}
+
+#typora-sidebar .ty-search-item-collapse-icon {
+    top: 9px;
+}
+
+/*no left border*/
+#typora-sidebar .file-tree-node.active > .file-node-background {
+    border: none;
+}
+
+/*no dotted highlighting*/
+.file-library-node:not(.file-node-root):focus > .file-node-content {
+    outline: none;
+}
+
+#typora-sidebar #sidebar-files-menu {
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#typora-sidebar #ty-sidebar-footer {
+    background-color: var(--bg-color);
+    border-top: solid 1px var(--borders);
+    font-weight: 500;
+}
+
+#typora-sidebar #ty-sidebar-footer li {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+}
+
+#typora-sidebar
+    #ty-sidebar-footer
+    li:not(.file-sort-item):not(:first-child):not(.empty-menu-group):not(.folder-menu-group):hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+#typora-sidebar
+    #ty-sidebar-footer
+    .file-action-item.file-sort-item
+    > span:first-of-type {
+    line-height: 2rem;
+}
+
+/*cursor*/
+.file-node-content:hover {
+    cursor: pointer;
+}
+
+body.html-for-mac
+    .file-tree-node:not(.file-node-root):not(.file-node-expanded)
+    .file-node-background {
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.file-tree-node:not(.file-node-root):not(.file-node-expanded):hover
+    .file-node-background {
+    background-color: var(--borders);
+}
+
+#typora-sidebar .sidebar-footer-item {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+    font-weight: 700;
+}
+
+#typora-sidebar .sidebar-footer-item:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+#typora-quick-open {
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 0rem;
+    box-shadow: rgba(116, 129, 141, 0.15) 0px 3px 16px 0px;
+    overflow: hidden;
+}
+
+#typora-quick-open-input {
+    margin-right: 20px;
+}
+
+#typora-quick-open-input .input {
+    box-shadow: none !important /*required*/;
+    border: none !important /*required*/;
+    font-weight: 400 !important /*required*/;
+    margin: 0.5rem;
+    margin-left: 0.8rem;
+}
+
+.typora-quick-open-item {
+    background-color: white;
+    border: none;
+    font-weight: 500;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.typora-quick-open-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+.typora-quick-open-item.active {
+    background-color: var(--boxes);
+    border: none;
+}
+
+.typora-quick-open-item-path {
+    opacity: 1;
+    color: var(--light-text-color);
+}
+
+.typora-quick-open-item:hover .typora-quick-open-item-path {
+    opacity: 0.7;
+    color: var(--primary-color);
+}
+
+.ty-quick-open-category-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    opacity: 1;
+    color: var(--light-text-color);
+    line-height: 32px;
+    padding-top: 6px;
+    height: 32px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+.md-lang {
+    color: var(--primary-color);
+}
+
+/*NOTIFICATION*/
+
+#md-notification {
+    border-bottom: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#md-notifcation .btn {
+    border: 0;
+}
+
+/*PREFERENCES*/
+
+.ty-preferences {
+    font-family: var(--font-family);
+}
+
+.ty-preferences .window-header {
+    justify-content: space-between;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-bottom: solid 1px var(--borders);
+}
+
+.ty-preferences .window-header-content {
+    background-color: white;
+    margin: 0rem;
+}
+
+.ty-preferences .window-header h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0rem;
+    margin-left: 1rem;
+}
+
+.unibody-window .ty-preferences .window-header h2 {
+    margin-left: 1rem !important;
+}
+
+.ty-preferences .window-header-back {
+    margin-left: 1.2rem;
+}
+
+.ty-preferences .window-header-back .icon {
+    border-right: none;
+}
+
+/*preferences sidebar*/
+.ty-preferences .window-content {
+    background-color: white;
+}
+
+.ty-preferences .nav-group-item {
+    color: var(--text-color);
+    height: 2.5rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    padding: 0px 0px 0px 2rem;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.ty-preferences .nav-group-item:hover {
+    background-color: var(--borders);
+    border-radius: 0px;
+}
+
+.ty-preferences .nav-group-item.active {
+    border-radius: 0rem;
+    border: none;
+    outline: 1px solid var(--borders);
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.ty-preferences .pane-sm {
+    background: var(--boxes);
+    flex-basis: 240px;
+    flex-grow: 0;
+    justify-content: center;
+    border-right: 1px solid var(--borders);
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.ty-preferences .pane-sm .list-group {
+    width: 100%;
+    max-width: 30rem;
+}
+
+.ty-preferences .list-group-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ty-preferences .list-group-header div {
+    width: 100%;
+    margin-right: 18px;
+    margin-left: 18px;
+}
+
+.ty-preferences .pane-sm .search-input {
+    margin: 0rem !important;
+    width: 100%;
+    font-size: 1rem !important;
+    height: 2.75rem;
+}
+
+.ty-preferences .pane-sm .search-input:active,
+.ty-preferences .pane-sm .search-input:focus {
+    border: solid 1px var(--primary-color) !important;
+    outline: none;
+}
+
+/*preferences main*/
+.ty-preferences .panel-header {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/*preferences stuff*/
+.ty-preferences .dropdown-menu > li,
+.dropdown-item {
+    font-weight: 500;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.ty-preferences .dropdown-menu .active,
+.ty-preferences .dropdown-menu li:hover,
+.dropdown-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+#ty-spell-check-dict-missing-secondary-btn:hover {
+    color: var(--primary-color) !important;
+}
+
+.header-close .icon {
+    border: none !important;
+}
+
+/*preferences export*/
+
+.export-detail {
+    background-color: transparent !important /*required*/;
+}
+
+.export-items-list .separator {
+    margin: 0.4rem;
+    border-top: 1px solid var(--borders);
+}
+
+.export-items-list-control {
+    background-color: var(--boxes) !important /*required*/;
+}
+
+.export-item {
+    padding: 0.4rem !important /*required*/;
+    color: var(--light-text-color-darker);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.export-item.active {
+    background-color: transparent !important /*required*/;
+    color: var(--primary-color);
+    font-weight: 500 !important /*required*/;
+}
+
+/*DROPDOWN*/
+
+.dropdown-menu:not(.megamenu-menu-list),
+.auto-suggest-container {
+    background-color: var(--bg-color);
+    border: solid 1px var(--borders) !important;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    user-select: none;
+}
+
+.dropdown-menu > li > a,
+.auto-suggest-container li {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > li > a:hover,
+.menu-style-btn.active,
+.auto-suggest-container li:hover,
+.context-menu.dropdown-menu > .active > a,
+.context-menu.dropdown-menu > li > a:hover,
+.auto-suggest-container li.active {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+.menu-style-btn {
+    color: var(--text-color);
+    border: none;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.menu-style-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+    border: none;
+}
+
+header .menu-style-btn:hover {
+    background-color: transparent;
+}
+
+.menu-item-container {
+    padding: 0 12px 0 4px;
+}
+
+.menu-item-container a.menu-style-btn {
+    padding: 0.3rem 0.6rem;
+    margin: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: var(--borders);
+    opacity: 1;
+}
+
+/*BUTTON*/
+
+.btn,
+button {
+    border: none !important;
+    border-radius: 0.3rem !important;
+    color: var(--text-color) !important;
+    transition-duration: 0.2s;
+    transition-property: all;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    outline: none;
+}
+
+.btn-default {
+    border: none !important;
+    border-radius: 0.3rem !important;
+    background-color: var(--boxes) !important;
+}
+
+.btn:hover,
+.button-hover {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--borders) !important;
+    color: var(--text-color);
+}
+
+button:active,
+button.active,
+.btn:active,
+.btn-default:active {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--boxes-darker) !important;
+    box-shadow: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+.btn:focus {
+    border: none !important;
+    outline: none !important;
+    background-color: var(--boxes-darker);
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: white;
+    background-color: var(--primary-color-darker) !important;
+}
+
+.btn.dropdown-toggle-split,
+.btn.dropdown-toggle-split:hover {
+    border-radius: 0rem 0.3rem 0.3rem 0rem !important;
+}
+
+#ty-spell-check-dict-missing-primary-btn {
+    border-radius: 0.3rem 0rem 0rem 0.3rem !important;
+}
+
+.open > .dropdown-toggle.btn-primary {
+    background-color: var(--primary-color);
+    border-color: transparent;
+}
+
+/*GHOST BUTTON*/
+
+.window-header button,
+#close-sidebar-menu-btn,
+.html-for-mac .sidebar-tab-btn,
+.label-hint,
+.ty-table-edit .btn,
+.zoom-hint-button,
+.md-rawblock-tooltip-btn,
+.md-delete-toc,
+#md-searchpanel .input-group-addon.btn,
+#pin-outline-btn,
+.icon-button {
+    background-color: transparent !important;
+    color: var(--light-text-color) !important;
+    opacity: 1 !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.window-header button:hover,
+.window-header button:focus,
+#close-sidebar-menu-btn:hover,
+#close-sidebar-menu-btn:focus,
+.html-for-mac .sidebar-tab-btn:hover,
+.html-for-mac .sidebar-tab-btn:focus,
+.label-hint:hover,
+.label-hint:focus,
+.ty-table-edit .btn:hover,
+.ty-table-edit .btn:focus,
+.zoom-hint-button:hover,
+.zoom-hint-button:focus,
+.md-rawblock-tooltip-btn:hover,
+.md-rawblock-tooltip-btn:focus,
+.md-delete-toc:hover,
+.md-delete-toc:focus,
+#md-searchpanel .input-group-addon.btn:hover,
+#md-searchpanel .input-group-addon.btn:focus,
+#pin-outline-btn:hover,
+#pin-outline-btn:focus,
+.icon-button:hover,
+.icon-button:focus {
+    color: var(--primary-color) !important;
+    background: none !important;
+}
+
+.ty-table-edit .btn.active {
+    color: var(--primary-color) !important;
+    box-shadow: none;
+}
+
+/*IMAGE BUTTON*/
+
+.md-image-btn {
+    background-color: var(--boxes);
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.md-image-btn:before {
+    color: var(--text-color);
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.md-image-btn:hover {
+    background-color: var(--borders);
+}
+
+.md-image-btn:hover:before {
+    color: var(--primary-color);
+}
+
+.md-image-input-src-btn {
+    border-radius: 0.3rem 0rem 0rem 0.3rem !important;
+}
+
+.md-image-pick-file-btn {
+    border-left: none;
+    border-radius: 0rem 0.3rem 0.3rem 0rem !important;
+}
+
+/*SEARCH-INPUTS*/
+
+.search-input,
+.search,
+.form-control,
+#file-library-search-input {
+    background-color: transparent !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker) !important;
+    box-shadow: none !important;
+    color: var(---heading-text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 400;
+    padding: 0.7rem !important;
+    height: 2rem;
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+.search-input:hover,
+.search:hover,
+.form-control:hover,
+#file-library-search-input:hover {
+    border: solid 1px var(--boxes-darker2) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.search-input:focus,
+.search:focus,
+.form-control:focus,
+#file-library-search-input:focus {
+    background-color: transparent !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    color: var(--heading-text-color) !important;
+    font-size: 0.9rem !important;
+    padding: 0.7rem !important;
+}
+
+.search-input::placeholder,
+.search::placeholder,
+.form-control::placeholder,
+#file-library-search-input::placeholder {
+    color: var(--light-text-color-darker) !important;
+}
+
+.clear-btn-icon {
+    top: 9px !important /*required*/;
+    right: 9px !important /*required*/;
+}
+
+.content tr.search-hit,
+.search-hit,
+.md-search-hit,
+/*.md-search-hit.md-search-select,*/
+.md-search-select,
+.ty-file-search-match-text {
+    background-color: var(--boxes-darkest);
+    color: white;
+    padding: 0.2rem 0.1rem;
+    border-radius: 0.2rem;
+}
+
+.md-search-hit.md-search-select {
+    background-color: var(--select-text-bg-color);
+} /* distinguishes text search selected from text search matched */
+
+/*ZOOM HINT*/
+
+#zoom-hint {
+    border-radius: 0.3rem;
+    border: solid 1px var(--borders);
+    user-select: none;
+    box-shadow: rgba(116, 129, 141, 0.08) 0px 2px 6px 0px;
+}
+
+#zoom-hint #zoom-hint-reset {
+    border-left: none;
+    font-weight: 600;
+}
+
+/*SEARCHPANEL*/
+
+#md-searchpanel {
+    border-bottom: 1px solid var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    max-height: 46px;
+}
+
+.mac-seamless-mode #md-searchpanel {
+    max-height: 70px;
+}
+
+#md-searchpanel.searchpanel-replace-mode {
+    max-height: 84px;
+}
+
+.mac-seamless-mode #md-searchpanel.searchpanel-replace-mode {
+    max-height: 108px;
+}
+
+#md-searchpanel input {
+    height: 2rem;
+    margin: 0rem !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+#md-searchpanel .input-group-addon {
+    height: 2rem;
+}
+
+#md-searchpanel .input-group-addon.close-btn {
+    padding-left: 8px;
+}
+
+.unibody-window #md-searchpanel .btn {
+    line-height: 2rem;
+}
+
+.searchpanel-search-option-btn {
+    top: 9px;
+    border: none;
+    color: var(--light-text-color-darker) !important /*required*/;
+    transition-duration: 0.3s;
+}
+
+.searchpanel-search-option-btn:hover {
+    color: var(--primary-color) !important /*required*/;
+    background-color: transparent !important /*required*/;
+}
+
+.searchpanel-search-option-btn.select,
+.searchpanel-search-option-btn.active {
+    color: white !important;
+    background-color: var(--primary-color) !important;
+}
+
+#searchpanel-regexp-option-btn {
+    right: 57px;
+}
+
+#searchpanel-case-option-btn {
+    right: 33px;
+}
+
+#searchpanel-word-option-btn {
+    right: 9px;
+}
+
+#searchpanel-word-option-btn,
+#searchpanel-case-option-btn {
+    background: none;
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+}
+
+/*SELECT*/
+/*TEXT INPUT*/
+/*NUMBER INPUT*/
+
+/* the input #md-grid-height doesn't have a type attached for some reason and needs to be adressed seperately */
+
+html select,
+html input[type="text"],
+html input[type="number"],
+#md-grid-height {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker) !important;
+    box-shadow: none !important;
+    color: var(--text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    padding: 0.3rem !important;
+    height: 2.1rem !important;
+    transition-duration: 0.2s;
+    transition-property: border;
+    cursor: text;
+}
+
+select {
+    cursor: pointer !important;
+}
+
+input[type="text"],
+input[type="number"] {
+    cursor: text;
+}
+
+html select:hover,
+html input[type="text"]:hover,
+html input[type="number"]:hover,
+#md-grid-height:hover {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border-color: var(--boxes-darker2) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    color: var(--text-color) !important;
+    font-size: 0.9rem !important;
+}
+
+html select:focus,
+html input[type="text"]:focus,
+html input[type="number"]:focus,
+#md-grid-height:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+#md-grid-height::placeholder {
+    color: var(--light-text-color-darker) !important;
+}
+
+input[disabled],
+input[disabled]:hover,
+input[disabled]:focus {
+    cursor: not-allowed;
+}
+
+/*TEXTAREA*/
+
+textarea {
+    background-color: transparent;
+    border: solid 1px var(--boxes-darker);
+    border-radius: 0.3rem;
+    transition-duration: 0.2s;
+}
+
+textarea:hover {
+    border-color: var(--boxes-darker2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    outline: none;
+}
+
+/*MODAL*/
+
+.modal-header,
+#common-dialog .modal-header {
+    border-bottom: solid 1px var(--borders);
+    padding-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+.modal-body {
+    font-size: 0.9rem;
+    color: var(--light-text-color-darker);
+    user-select: none;
+}
+
+.modal-content {
+    box-shadow: rgba(116, 129, 141, 0.15) 0px 3px 10px 0px;
+    border: solid 1px var(--boxes-darker);
+    border-radius: 0.3rem;
+}
+
+.modal-footer {
+    border-top: solid 1px var(--borders);
+}
+
+.modal-open .modal.fade.in {
+    background: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/*LANGS*/
+
+.ty-spell-check-panel-item {
+    font-weight: 500;
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+}
+
+.ty-spell-check-panel-item:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+.ty-spell-check-panel-item.ty-active {
+    background-color: var(--boxes);
+}
+
+/*TOOLTIP*/
+
+.ty-tooltip {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: 1px solid var(--borders) !important;
+    -webkit-filter: none !important;
+    filter: none;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+/*FOOTER*/
+
+.footer-item:hover {
+    background-color: var(--boxes) !important;
+}
+
+#footer-word-count-info {
+    padding: 4px 0;
+}
+
+.footer-word-count-info-line {
+    padding: 0.25rem;
+    line-height: 1.6rem;
+}
+
+#footer-word-count-info tr {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+#footer-word-count-info tr td:nth-child(1) {
+    padding: 0rem;
+    padding-right: 1rem;
+}
+
+#footer-word-count-info .ty-footer-word-count-all tr:hover {
+    color: var(--primary-color) !important;
+    background-color: var(--boxes) !important;
+}
+
+/*MEGAMENU*/
+
+.megamenu-menu {
+    box-shadow: none;
+    background-color: var(--boxes);
+    border-right: 1px solid var(--borders);
+}
+
+.megamenu-opened .megamenu-menu {
+    left: 0px;
+}
+
+#megamenu-content {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#megamenu-menu-list {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+
+#megamenu-menu-list li a {
+    color: var(--text-color);
+    height: 2rem;
+    line-height: 1.8rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#megamenu-menu-list li a:hover {
+    background-color: var(--borders);
+}
+
+#megamenu-menu-list li a.active {
+    color: var(--primary-color);
+    background-color: white;
+    outline: solid 1px var(--borders);
+}
+
+#megamenu-menu-list .divider {
+    background-color: var(--borders);
+    margin: 16px 0 0 0;
+}
+
+.megamenu-menu-list .saved #m-saved {
+    cursor: default;
+}
+
+.megamenu-menu-list .saved #m-saved .fa {
+    color: var(--primary-color);
+}
+
+.megamenu-menu-list .saved #m-saved:hover {
+    background-color: transparent;
+}
+
+.megamenu-menu-list #m-close:hover {
+    color: var(--danger-color);
+}
+
+.megamenu-menu-header {
+    border-bottom: solid 1px var(--borders);
+    margin-bottom: 1.2rem;
+    height: 74px;
+    transition-duration: 0.3s;
+}
+
+.megamenu-menu-header:hover {
+    background-color: var(--borders);
+}
+
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    left: 56px;
+    top: 24px;
+}
+
+#megamenu-back-btn {
+    color: var(--text-color);
+    font-size: 16px;
+    left: 24px;
+    top: 24px;
+}
+
+.megamenu-opened header {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-content {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-menu-panel:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+.megamenu-menu-panel h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+.megamenu-menu-panel h2 {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+/*recent files*/
+
+#recent-file-panel tbody tr {
+    font-weight: 600;
+    transition-duration: 0.4s;
+}
+
+#recent-file-panel tbody tr:hover,
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: var(--primary-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: var(--boxes);
+}
+
+/*about help*/
+
+.about-content-slogon {
+    color: var(--light-text-color);
+}
+
+/*for the god himself*/
+.about-content-slogon span {
+    color: var(--primary-color) !important;
+}
+
+#about-content tbody tr {
+    font-weight: 500;
+    transition-duration: 0.4s;
+}
+
+#about-content tbody tr:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes) !important /*required important*/;
+}
+
+.long-btn {
+    margin-bottom: 12px;
+    margin-left: 2px;
+    box-shadow: rgba(116, 129, 141, 0.1) 2px 2px 6px;
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 700;
+    font-size: 1rem;
+
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.long-btn:hover {
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+    color: white !important /*important required*/;
+    box-shadow: rgba(116, 129, 141, 0.1) 2px 2px 6px,
+        rgba(26, 168, 139, 0.2) 0px 0px 10px;
+}
+
+#m-import-local:hover .preference-item-hint {
+    color: white;
+    opacity: 0.7;
+}
+
+#recent-file-panel-action-btn {
+    height: 34px;
+    border: none;
+    background-color: var(--boxes);
+}
+
+#theme-preview-grid {
+    max-width: none;
+    padding: 1.5rem;
+    background-color: var(--boxes);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.theme-preview-div {
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 0px 15px;
+    margin: 0rem;
+    transition-duration: 0.3s;
+}
+
+.theme-preview-div:hover {
+    box-shadow: rgba(116, 129, 141, 0.5) 3px 8px 15px;
+    cursor: pointer;
+    transform: rotate3d(1, -0.2, 0.2, 15deg);
+}
+
+.theme-preview-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+}
+
+.theme-preview-content html {
+    width: 100%;
+    height: 100%;
+}
+
+.theme-preview-div.active .fa {
+    color: var(--primary-color);
+    bottom: 4px;
+    left: 4px;
+}
+
+.theme-preview-div .fa-check-circle:before {
+    background-color: var(--bg-color);
+    padding: 0px 2px;
+    border-radius: 1rem;
+}
+
+.megamenu-menu-panel tbody tr {
+    border-radius: 0.3rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.megamenu-menu-panel tbody tr:hover {
+    background-color: var(--borders) !important /*required important*/;
+}
+
+/*MIN MAX CLOSE*/
+#w-min,
+#w-max,
+#w-restore,
+#w-close {
+    border-radius: 0px !important;
+    font-size: 10px !important;
+    width: 46px !important;
+    height: 29px !important;
+}
+
+.btn.toolbar-icon svg,
+.btn.toolbar-icon .ty-icon {
+    position: relative;
+    top: 2px;
+}
+
+#w-close.btn.toolbar-icon .ty-icon {
+    left: 1px;
+}
+
+#w-close:hover {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+}
+
+/*EXTRA STUFF*/
+
+a[type="page-link"] {
+    display: block;
+    background-color: white;
+    box-shadow: rgba(116, 129, 141, 0.2) 0px 3px 8px 0px;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 600;
+
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+a[type="page-link"]:hover {
+    box-shadow: rgba(116, 129, 161, 0.1) 0px 3px 8px 0px;
+    border: 1px solid var(--primary-color);
+}
+
+p[type="description"] {
+    color: var(--light-text-color);
+}
+
+/*kbd*/
+
+kbd {
+    font-family: var(--font-family);
+}
+
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						} @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>[논문리뷰] exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='exbert-extending-pre-trained-models-with-domain-specific-vocabulary-under-constrained-training-resources'><span>exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources</span></h1><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="latex"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="latex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11.5px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>7</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">@inproceedings<span class="cm-bracket">{</span>tai2020exbert,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  title=<span class="cm-bracket">{</span>exBERT: Extending pre-trained models with domain-specific vocabulary under constrained training resources<span class="cm-bracket">}</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  author=<span class="cm-bracket">{</span>Tai, Wen and Kung, HT and Dong, Xin Luna and Comiter, Marcus and Kuo, Chang-Fu<span class="cm-bracket">}</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  booktitle=<span class="cm-bracket">{</span>Findings of the Association for Computational Linguistics: EMNLP 2020<span class="cm-bracket">}</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  pages=<span class="cm-bracket">{</span><span class="cm-atom">1433</span>--1439<span class="cm-bracket">}</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  year=<span class="cm-bracket">{</span><span class="cm-atom">2020</span><span class="cm-bracket">}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-bracket">}</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 243px;"></div><div class="CodeMirror-gutters" style="height: 243px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><ul><li><p><strong><span>GitHub</span></strong><span>:  </span><a href='https://github.com/cgmhaicenter/exBERT' target='_blank' class='url'>https://github.com/cgmhaicenter/exBERT</a></p></li></ul><hr /><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1834"><a class="md-toc-inner" style="" href="#exbert-extending-pre-trained-models-with-domain-specific-vocabulary-under-constrained-training-resources">exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1842"><a class="md-toc-inner" style="" href="#abstract">Abstract</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1853"><a class="md-toc-inner" style="" href="#1-introduction">1. Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1885"><a class="md-toc-inner" style="" href="#2-related-work">2. Related Work</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1926"><a class="md-toc-inner" style="" href="#3-exbert-approach">3. exBERT Approach</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1930"><a class="md-toc-inner" style="" href="#31-extension-vocabulary-and-embedding-layer">3.1. Extension Vocabulary and Embedding Layer</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1970"><a class="md-toc-inner" style="" href="#32-extension-module">3.2. Extension Module</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1995"><a class="md-toc-inner" style="" href="#4-performance-evaluation-of-exbert">4. Performance Evaluation of ExBERT</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1996"><a class="md-toc-inner" style="" href="#41-experiment-setup">4.1. Experiment setup</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2030"><a class="md-toc-inner" style="" href="#exbert-adaptive-pre-training">exBERT Adaptive Pre-training</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2046"><a class="md-toc-inner" style="" href="#fine-tuning">Fine-tuning</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2061"><a class="md-toc-inner" style="" href="#42-impact-of-the-extension-module-size">4.2. Impact of the Extension Module Size</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2084"><a class="md-toc-inner" style="" href="#43-impact-of-training-time-on-performance">4.3. Impact of Training Time on Performance</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2149"><a class="md-toc-inner" style="" href="#5-conclusion">5. Conclusion</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2162"><a class="md-toc-inner" style="" href="#a-appendix">A. Appendix</a></span></p></div><hr /><h2 id='abstract'><span>Abstract</span></h2><ul><li><p><a title="exBERT uses a small extension module to learn to adapt an augmenting embedding for the new domain in the context of the original BERT’s embedding of a general vocabulary." ><span>🪶</span></a><span> exBERT는 원래 BERT의 일반 어휘 임베딩 문맥에서 새로운 도메인을 위한 증강 임베딩을 적응하는 작은 확장 모듈을 사용한다.</span></p></li><li><p><a title="The exBERT training method is novel in learning the new vocabulary and the extension module while keeping the weights of the original BERT model fixed, resulting in a substantial reduction in required training resources." ><span>🪶</span></a><span> exBERT 훈련 방법은 새로운 어휘와 확장 모듈을 학습하는 동안 원래 BERT 모델의 가중치를 고정하여 필요한 훈련 자원을 크게 줄인다.</span></p></li><li><p><a title="We pre-train exBERT with biomedical articles from ClinicalKey and PubMed Central, and study its performance on biomedical downstream benchmark tasks using the MTL-Bioinformatics-2016 dataset." ><span>🪶</span></a><span> ClinicalKey와 PubMed Central의 생의학 기사로 exBERT를 사전 학습하고, MTL-Bioinformatics-2016 데이터셋을 사용하여 생의학 다운스트림 벤치마크 작업에서의 성능을 확인한다.</span></p></li><li><p><a title="We demonstrate that exBERT consistently outperforms prior approaches when using limited corpus and pre-training computation resources." ><span>🪶</span></a><span> 제한된 말뭉치와 사전 학습 계산 자원을 사용할 때 exBERT가 이전 접근 방식을 일관되게 능가함을 입증합니다.</span></p></li></ul><h2 id='1-introduction'><span>1. Introduction</span></h2><ul><li><p><a title="Pre-trained language representation models have led to breakthrough performance improvements in downstream natural language processing (NLP) tasks including named entity recognition (Sang and De Meulder, 2003), question answering (Rajpurkar et al., 2016), and sentence classification (Socher et al., 2013)." ><span>🪶</span></a><span> 사전 학습된 언어 표현 모델은 NER(Sang and De Meulder, 2003), 질문 응답(Rajpurkar et al., 2016), 문장 분류(Socher et al., 2013)를 포함한 다운스트림 자연어 처리 작업에서 획기적인 성능 향상을 이끌어냈다.</span></p></li><li><p><a title="However, pre-trained language models face two challenges as their applications expand:" ><span>🪶</span></a><span> 그러나 사전 학습된 언어 모델은 그 적용이 확대됨에 따라 </span><mark style="background: #eeeeee; color:#3b454e;"><span>두 가지 어려움</span></mark><span>에 직면한다:</span></p><ul><li><p><a title="1) Large Training Resources: Training requires substantial computation and data, see, e.g., BERT-large (Devlin et al., 2018), RoBERTa (Liu et al., 2019)." ><span>🪶</span></a><span> 1) </span><strong><mark style="background: #eeeeee; color:#3b454e;"><span>대규모 학습 자원</span></mark></strong><span>: 훈련에는 막대한 계산과 데이터가 필요 (BERT-large(Devlin et al., 2018), RoBERTa(Liu et al., 2019))</span></p></li><li><p><a title="2) Embedding of Domain-specific Vocabulary: A specialized domain, such as the biomedical domain on which this work focuses, has its own vocabulary, and sentences in the domain may have words from both the original language model’s vocabulary and new domain-specific vocabulary." ><span>🪶</span></a><span> 2) </span><strong><mark style="background: #eeeeee; color:#3b454e;"><span>도메인 특화 어휘의 임베딩</span></mark></strong><span>: 여기서 초점을 맞추고 있는 생의학 도메인과 같은 특수 도메인은 고유의 어휘를 가지며, 도메인의 문장에는 원래 언어 모델의 어휘와 새로운 도메인 특화 어휘가 모두 포함될 수 있음.</span></p></li></ul></li><li><p><a title="Being able to operate on this mixture of vocabulary is essential in achieving high performance on downstream tasks in the new domain (Garneau et al., 2019)." ><span>🪶</span></a><span> 이 혼합된 어휘를 처리할 수 있는 능력은 새로운 도메인에서의 다운스트림 작업에서 높은 성능을 달성하는 데 필수적이다(Garneau et al., 2019).</span></p></li><li><p><a title="These challenges are particularly pronounced in biomedical domains, where there are many domain-specific words." ><span>🪶</span></a><span> 이 어려움은 많은 도메인 특화 단어가 있는 생의학 도메인에서 특히 두드러진다.</span></p></li><li><p><a title="Prior approaches have addressed these issues by either constructing the pre-trained model from scratch with a new vocabulary (e.g., SciBERT (Beltagy et al., 2019)) or adapting the existing pre-trained model by using it as the initial model in learning vocabulary embeddings for the new domain (e.g., BioBERT (Lee et al., 2019))." ><span>🪶</span></a><span> 이전 접근 방식은 새로운 어휘로 </span><mark style="background: #eeeeee; color:#3b454e;"><span>사전 학습된 모델을 처음부터 구성</span></mark><span>하거나(SciBERT(Beltagy et al., 2019)), </span><mark style="background: #eeeeee; color:#3b454e;"><span>기존 사전 학습된 모델을 새로운 도메인의 어휘 임베딩을 학습하는 초기 모델로 사용</span></mark><span>하여 적응시키는 방식(BioBERT(Lee et al., 2019))으로 이러한 문제를 해결해 왔다.</span></p></li><li><p><a title="However, constructing the model with a new vocabulary from scratch requires substantial computational resources and training data." ><span>🪶</span></a><span> 그러나 새로운 어휘로 처음부터 모델을 구성하는 것은 막대한 계산 자원과 훈련 데이터를 필요로 한다.</span></p></li><li><p><a title="Adapting the existing pre-trained model leads to sub-optimal performance on downstream tasks because the original vocabulary may not be proper for biomedical domains (Garneau et al., 2019; Hu et al., 2019)." ><span>🪶</span></a><span> 기존 사전 학습된 모델을 적응시키는 것은 원래의 어휘가 생의학 도메인에 적합하지 않을 수 있기 때문에 다운스트림 작업에서 최적 성능보다 낮은 성능을 초래한다(Garneau et al., 2019; Hu et al., 2019).</span></p></li><li><p><a title="We propose exBERT, a novel approach that addresses these challenges by explicitly incorporating the new domain’s vocabulary, while being able to reuse the original pre-trained model’s weights as is to reduce required computation and training data." ><span>🪶</span></a><span> 우리는 이러한 문제를 해결하기 위해 새로운 도메인의 어휘를 명시적으로 통합하면서 </span><mark style="background: #eeeeee; color:#3b454e;"><span>원래의 사전 학습된 모델의 가중치를 그대로 재사용</span></mark><span>하여 </span><mark style="background: #eeeeee; color:#3b454e;"><span>필요한 계산과 학습 데이터를 줄이는</span></mark><span> 혁신적인 접근 방식인 exBERT를 제안한다.</span></p></li><li><p><a title="Specifically, exBERT extends BERT by augmenting its embeddings for the original vocabulary with new embeddings for the domain-specific vocabulary via a learned small 'extension' module." ><span>🪶</span></a><span> 구체적으로, exBERT는 학습된 작은 &quot;확장&quot; 모듈을 통해 원래 어휘에 대한 임베딩을 도메인 특화 어휘에 대한 새로운 임베딩으로 증강하여 BERT를 확장한다.</span></p></li><li><p><a title="The output of the original and extension modules are combined via a trainable weighted sum operation." ><span>🪶</span></a><span> 원래 모듈과 확장 모듈의 출력은 학습 가능한 가중 합 연산을 통해 결합된다.</span></p></li><li><p><a title="exBERT after pre-training achieves higher performance than the BioBERT adaption method under constrained training resources when evaluated on two biomedical downstream benchmark NLP tasks: name entity recognition (NER) (Do˘gan et al., 2014; Li et al., 2016) and relation extraction (RE) (Bhasuran and Natarajan, 2018)." ><span>🪶</span></a><span> 사전 학습 후 exBERT는 제한된 학습 자원 하에서 두 가지 생의학 다운스트림 벤치마크 NLP 작업, 즉 NER(Doğan et al., 2014; Li et al., 2016) 및 관계 추출(Bhasuran and Natarajan, 2018) 평가에서 BioBERT 적응 방법보다 높은 성능을 달성한다.</span></p></li><li><p><a title="The primary contribution of this paper is a pre-training method allowing low-cost embedding of domain-specific vocabulary in the context of an existing large pre-trained model such as BERT." ><span>🪶</span></a><span> 이 논문의 주요 기여는 BERT와 같은 기존의 대규모 사전 학습된 모델의 문맥에서 도메인 특화 어휘를 저비용으로 임베딩할 수 있는 사전 학습 방법을 제공하는 것이다.</span></p></li></ul><h2 id='2-related-work'><span>2. Related Work</span></h2><ul><li><p><a title="Learning representations of natural languages is useful for a variety of NLP tasks (McCann et al., 2017; Liu et al., 2019)." ><span>🪶</span></a><span> 자연어의 표현을 학습하는 것은 다양한 NLP 작업에 유용합니다(McCann et al., 2017; Liu et al., 2019).</span></p></li><li><p><a title="It has been demonstrated that larger model size and corpus size benefit performance (Radford et al., 2019)." ><span>🪶</span></a><span> 모델 크기와 말뭉치 크기가 클수록 성능이 향상된다는 것이 입증되었습니다(Radford et al., 2019).</span></p></li><li><p><a title="A widely used pre-training model, BERT (Devlin et al., 2018), is a transformer-based model (Vaswani et al., 2017) pre-trained with a masked language model and next sentence prediction task." ><span>🪶</span></a><span> 널리 사용되는 사전 학습 모델인 BERT(Devlin et al., 2018)는 마스킹 언어 모델과 다음 문장 예측 작업으로 사전 학습된 트랜스포머 기반 모델입니다(Vaswani et al., 2017).</span></p></li><li><p><a title="The vocabulary used by BERT contains words and subwords extracted from a general language corpus (English Wikipedia and BooksCorpus) by WordPiece (Wu et al., 2016)." ><span>🪶</span></a><span> BERT에서 사용되는 어휘는 WordPiece(Wu et al., 2016)에 의해 일반 언어 말뭉치(영어 위키피디아 및 BooksCorpus)에서 추출된 단어와 서브워드로 구성되어 있습니다.</span></p></li><li><p><a title="To get a biomedical domain-specific pre-training language model, BioBERT (Lee et al., 2019) continues training the original BERT model with a biomedical corpus without changing the BERT’s architecture or the vocabulary, and achieves improved performance in several biomedical downstream tasks." ><span>🪶</span></a><span> 생의학 도메인 특화 사전 학습 언어 모델을 얻기 위해 BioBERT(Lee et al., 2019)는 BERT의 아키텍처나 어휘를 변경하지 않고 생의학 말뭉치로 원래 BERT 모델을 계속 학습하여 여러 생의학 다운스트림 작업에서 성능을 향상시켰습니다.</span></p></li><li><p><a title="However, the use of original BERT’s general vocabulary often splits a domain-specific word into several sub-words, making the training much more challenging." ><span>🪶</span></a><span> 그러나 원래 BERT의 일반 어휘를 사용하면 도메인 특화 단어가 여러 개의 서브워드로 분할되어 학습이 훨씬 더 어려워집니다.</span></p></li><li><p><a title="SciBERT (Beltagy et al., 2019) compares the vocabulary extracted from general and scientific articles, and finds 58% of the scientific vocabulary is not included in the original BERT’s vocabulary." ><span>🪶</span></a><span> SciBERT(Beltagy et al., 2019)는 일반 기사와 과학 기사에서 추출된 어휘를 비교한 결과, 과학 어휘의 58%가 원래 BERT의 어휘에 포함되지 않는다는 것을 발견했습니다.</span></p></li><li><p><a title="To address this problem, SciBERT uses a new vocabulary, including high-frequency words and sub-words in scientific articles." ><span>🪶</span></a><span> 이 문제를 해결하기 위해 SciBERT는 과학 기사에서 자주 등장하는 단어와 서브워드를 포함한 새로운 어휘를 사용합니다.</span></p></li><li><p><a title="Results show that the new vocabulary helps the performance of downstream tasks." ><span>🪶</span></a><span> 결과는 새로운 어휘가 다운스트림 작업의 성능 향상에 도움이 된다는 것을 보여줍니다.</span></p></li><li><p><a title="However, the new vocabulary is not recognized by the pre-trained model; therefore, the model needs to be trained from scratch, requiring substantial computing resources and training data." ><span>🪶</span></a><span> 그러나 새로운 어휘는 사전 학습된 모델에 의해 인식되지 않으므로, 모델은 처음부터 학습되어야 하며 이는 막대한 컴퓨팅 자원과 훈련 데이터를 필요로 합니다.</span></p></li><li><p><a title="In a recent study, PubMedBERT (Gu et al., 2020) pre-trained the model from scratch with PubMed articles and a customized vocabulary (constructed from the PubMed articles)." ><span>🪶</span></a><span> 최근 연구에서 PubMedBERT(Gu et al., 2020)는 PubMed 기사와 맞춤형 어휘(PubMed 기사에서 구성됨)를 사용하여 처음부터 모델을 사전 학습했습니다.</span></p></li><li><p><a title="This study indicates that a proper vocabulary helps the performance of downstream tasks in specific domains." ><span>🪶</span></a><span> 이 연구는 적절한 어휘가 특정 도메인에서 다운스트림 작업의 성능 향상에 도움이 된다는 것을 나타냅니다.</span></p></li><li><p><a title="However, training the model from scratch is extremely expensive in terms of data and computation." ><span>🪶</span></a><span> 그러나 모델을 처음부터 학습하는 것은 데이터와 계산 측면에서 매우 비용이 많이 듭니다.</span></p></li><li><p><a title="In multilingual language modeling, the out of vocabulary (OOV) problem harms the performance due to the limited vocabulary that cannot cover all the words in each language." ><span>🪶</span></a><span> 다국어 언어 모델링에서 어휘 외(OOV) 문제는 각 언어의 모든 단어를 포괄할 수 없는 제한된 어휘 때문에 성능에 해를 끼칩니다.</span></p></li><li><p><a title="The mixture mapping method of (Wang et al., 2019) represents each OOV word as a mixture of English subwords where the English subwords are already in the original vocabulary." ><span>🪶</span></a><span> Wang et al.(2019)의 혼합 매핑 방법은 각 OOV 단어를 원래 어휘에 이미 포함된 영어 서브워드의 혼합으로 나타냅니다.</span></p></li><li><p><a title="However, our preliminary experiments have shown that directly initializing the embedding of the domain-specific words with the mixture of the subword embeddings does not benefit the performance." ><span>🪶</span></a><span> 그러나 우리의 예비 실험은 서브워드 임베딩의 혼합으로 도메인 특화 단어의 임베딩을 직접 초기화하는 것이 성능에 도움이 되지 않는다는 것을 보여주었습니다.</span></p></li><li><p><a title="Transfer learning with extra adaptors (Houlsby et al., 2019) applied to the pre-trained model shows competitive performance compared with fine-tuning the pre-trained model." ><span>🪶</span></a><span> 사전 학습된 모델에 적용된 추가 어댑터를 사용한 전이 학습(Houlsby et al., 2019)은 사전 학습된 모델의 미세 조정과 비교하여 경쟁력 있는 성능을 보여줍니다.</span></p></li><li><p><a title="Training only a relatively small adaptor module is parameter efficient and the origin model is kept the same." ><span>🪶</span></a><span> 상대적으로 작은 어댑터 모듈만 학습하는 것은 파라미터 효율적이며 원래 모델은 동일하게 유지됩니다.</span></p></li><li><p><a title="Similar to this concept but not in a fine-tuning paradigm, we pre-train only the size-free extension module and the embedding layer of the extension vocabulary." ><span>🪶</span></a><span> 이 개념과 유사하지만 미세 조정 패러다임이 아닌, 우리는 크기 자유 확장 모듈과 확장 어휘의 임베딩 레이어만 사전 학습합니다.</span></p></li></ul><h2 id='3-exbert-approach'><span>3. exBERT Approach</span></h2><ul><li><p><a title="For exBERT, we augment the original BERT’s embedding layer with an extension embedding layer and corresponding domain-specific extension vocabulary, and add an extension module to each transformer layer." ><span>🪶</span></a><span> exBERT에서는 원래 BERT의 임베딩 레이어를 확장 임베딩 레이어와 해당 도메인 특화 확장 어휘로 보강하고, 각 트랜스포머 레이어에 확장 모듈을 추가한다.</span></p></li></ul><h3 id='31-extension-vocabulary-and-embedding-layer'><span>3.1. Extension Vocabulary and Embedding Layer</span></h3><ul><li><p><a title="First, we derive an extension vocabulary from the target domain (biomedical for this paper) corpus via WordPiece (Wu et al., 2016), while keeping the original general vocabulary used by BERT unchanged." ><span>🪶</span></a><span> 먼저, WordPiece(Wu et al., 2016)를 통해 대상 도메인(이 논문에서는 생의학)의 말뭉치에서 확장 어휘를 도출하고, </span><mark style='background: #fff5b1; color:#3b454e;'><span>BERT에서 사용된 원래의 일반 어휘는 그대로 유지</span></mark><span>한다.</span></p></li><li><p><a title="Any token in the extension vocabulary already present in the original general vocabulary is deleted to ensure the extension vocabulary is an absolute complement to the original vocabulary." ><span>🪶</span></a><span> 확장 어휘에 있는 토큰 중 </span><mark style='background: #fff5b1; color:#3b454e;'><span>원래의 일반 어휘에 이미 존재하는 토큰은 삭제</span></mark><span>하여 확장 어휘가 원래 어휘를 완전히 보완하도록 한다.</span></p></li><li><p><a title="We then add a corresponding embedding layer for the extension vocabulary, which is randomly initialized at the beginning and can be optimized during pre-training." ><span>🪶</span></a><span> 그 다음, 확장 어휘에 해당하는 임베딩 레이어를 추가하는데, 이 레이어는 </span><mark style='background: #fff5b1; color:#3b454e;'><span>처음에 무작위로 초기화</span></mark><span>되고 사전 학습 중에 최적화될 수 있다.</span></p></li><li><p><a title="The overall vocabulary, containing 30,522 (original) and 17,748 (extension) tokens, is used for tokenizing input text." ><span>🪶</span></a><span> 원래 30,522개의 토큰과 </span><mark style="background: #eaffb3; color:#3b454e;"><span>확장된 17,748개의 토큰</span></mark><span>을 포함한 전체 어휘는 입력 텍스트를 토큰화하는 데 사용된다.</span></p></li><li><p><a title="This approach contrasts from SciBERT (Beltagy et al., 2019), which replaces the entire vocabulary and then pre-trains the model from scratch." ><span>🪶</span></a><span> 이 접근 방식은 전체 어휘를 교체한 후 처음부터 모델을 사전 학습하는 SciBERT(Beltagy et al., 2019)와는 대조적이다.</span></p></li><li><p><a title="We tried different extension vocabulary sizes and found that increasing the vocabulary size has a small impact on performance (e.g., increasing the extension vocabulary size by an additional 12K words only improve performance by 0.0041 F1 score)." ><span>🪶</span></a><span> 서로 다른 확장 어휘 크기를 시도해 보았고, 어휘 크기를 증가시키는 것이 성능에 미미한 영향을 미친다는 것을 발견했다(예: 확장 어휘 크기를 추가로 12K 단어 증가시켜도 성능이 0.0041 F1 점만 향상된다).</span></p></li><li><p><a title="This is due to the fact that there is no clear drop off in vocabulary frequency of occurrence." ><span>🪶</span></a><span> 이는 어휘 발생 빈도가 뚜렷하게 감소하지 않기 때문이다.</span></p></li><li><p><a title="Further, increasing vocabulary size increases time-to-convergence, so in order to bound the convergence time we choose a relatively small extension vocabulary size." ><span>🪶</span></a><span> 또한 어휘 크기를 증가시키면 수렴 시간이 증가하므로, 수렴 시간을 제한하기 위해 상대적으로 작은 확장 어휘 크기를 선택한다.</span></p></li></ul><figure><table><thead><tr><th style='text-align:center;' ><span>Figure 1. Sentence embedding and the exBERT architecture</span><br /><span>(a) </span><a title="Derivation of the sentence embedding based on both the original and extension vocabulary." ><span>🪶</span></a><span> 기존 어휘와 확장 어휘를 기반으로 하는 문장 임베딩 유도 과정</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="_attachements/image-20240608215457810.png" referrerpolicy="no-referrer" alt="figure1-a"></td></tr></tbody></table></figure><p>&nbsp;</p><ul><li><p><a title="As illustrated in Figure 1(a), the output embedding of a given sentence consists of embedding vectors from both the original and extension embedding layer." ><span>🪶</span></a><span> 그림 1(a)에 설명된 대로, 주어진 문장의 출력 임베딩은 원래 임베딩 레이어와 확장 임베딩 레이어의 임베딩 벡터로 구성된다.</span></p></li><li><p><a title="Taking the sentence ‘Thalamus is a part of brain' as an example, our overall vocabulary will tokenize it into eight tokens (‘tha’, ‘##lam’, ‘##us’, ‘is’, ‘a’, ‘part’, ‘of’, ‘brain’), with the embedding vector of ‘thalamus' coming from the extension embedding layer and all other tokens' embedding vectors from the original pre-trained embedding layer." ><span>🪶</span></a><span> 예를 들어, &#39;Thalamus is a part of brain&#39;라는 문장을 살펴보면, 우리의 전체 어휘는 이를 여덟 개의 토큰(&#39;tha&#39;, &#39;##lam&#39;, &#39;##us&#39;, &#39;is&#39;, &#39;a&#39;, &#39;part&#39;, &#39;of&#39;, &#39;brain&#39;)으로 토큰화하며, &#39;thalamus&#39;의 임베딩 벡터는 확장 임베딩 레이어에서 오고, 다른 모든 토큰의 임베딩 벡터는 원래 사전 학습된 임베딩 레이어에서 온다.</span></p></li><li><p><a title="Without the extension vocabulary, the original BERT might have tokenized ‘thalamus' into three tokens, (‘tha’, ‘##lam’, ‘##us’), compared to ‘thalamus' tokenized as a single word under our method." ><span>🪶</span></a><span> 확장 어휘가 없으면, 원래 BERT는 &#39;thalamus&#39;를 세 개의 토큰(&#39;tha&#39;, &#39;##lam&#39;, &#39;##us&#39;)으로 토큰화할 수 있습니다. 그에 비해, 우리의 방법으로는 &#39;thalamus&#39;가 단일 단어로 토큰화된다.</span></p></li><li><p><a title="Therefore by adding the extension vocabulary and corresponding embedding layer, exBERT enables more meaningful tokenization of input text." ><span>🪶</span></a><span> 따라서 확장 어휘와 해당 임베딩 레이어를 추가함으로써 exBERT는 입력 텍스트의 보다 의미 있는 토큰화를 가능하게 한다.</span></p></li><li><p><a title="However, there are still two issues: (1) Embedding vectors of the extension vocabulary are unknown to the pre-trained BERT model, (2) Distribution of token representation in the original vocabulary may experience a shift from the general domain to the target domain due to the use of different sentence styles, formality, intent, and so on." ><span>🪶</span></a><span> 그러나 여전히 두 가지 문제가 있다: (1) </span><mark style="background: #eeeeee; color:#3b454e;"><span>확장 어휘 임베딩 벡터에 대한 정보를 사전학습된 BERT 모델은 알지 못한다.</span></mark><span> (2) 원래 어휘에서의 </span><mark style="background: #eeeeee; color:#3b454e;"><span>토큰 표현 분포는 서로 다른 문장 스타일, 형식, 의도 등의 사용으로 인해 일반 도메인에서 대상 도메인으로 이동할 수 있다.</span></mark></p><ul><li><p><span>(2) = 다른 도메인의 컨텍스트에서 동일한 단어는 다른 표현을 가질 수 있는데, 일반 도메인에서나 전문 도메인에서나 의미가 같은 단어는 같은 표현을 가져야 한다.</span></p></li></ul></li><li><p><a title="We address these issues by applying a weighted combination mechanism that allows the original BERT model and extension module to cooperate." ><span>🪶</span></a><span> 우리는 이러한 문제를 해결하기 위해 원래 BERT 모델과 확장 모듈이 협력할 수 있도록, </span><mark style="background: #eeeeee; color:#3b454e;"><span>가중 결합 메커니즘(Weighted combination mechanism)</span></mark><span>을 적용한다.</span></p></li></ul><h3 id='32-extension-module'><span>3.2. Extension Module</span></h3><figure><table><thead><tr><th style='text-align:center;' ><span>Figure 1. Sentence embedding and the exBERT architecture</span><br /><span>(b) </span><a title="Each input sentence consists of n 768-dimensional embedding vectors where n is 128 in our experiments. The output embedding is a component-wise weighted (computed by the weighting block) sum of outputs from the two modules." ><span>🪶</span></a><span> 각 입력 문장은 우리 실험에서 n이 128개인 n개의 768차원 임베딩 벡터로 구성된다. 출력 임베딩을 두 모듈의 출력에 대한 구성 요소별 가중치(가중치 블록에 의해 계산됨)의 합계이다.</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="./_attachements/image-20240609001752731.png" referrerpolicy="no-referrer" alt="image-20240609001752731"></td></tr><tr><td style='text-align:center;' ><span>/</span><img src="./_attachements/image-20240609002108774.png" referrerpolicy="no-referrer" alt="image-20240609002108774"></td></tr></tbody></table></figure><p>&nbsp;</p><ul><li><p><a title="exBERT augments each layer of the original BERT (referred to as the 'off-the-shelf' module) by adding an extension module to its side as depicted in Figure 1(b)." ><span>🪶</span></a><span> exBERT는 </span><mark style='background: #eeeeee; color:#3b454e;'><span>원래 BERT의 각 레이어(“off-the-shelf” 모듈</span></mark><span>이라고 함)을 그림 1(b)에 나와 있는 대로 측면에 확장 모듈을 추가하여 보완한다.</span></p></li><li><p><a title="To combine the output from the off-the-shelf module Tofs(·) and the extension module Text(·), we use a weighted sum mechanism as below:" ><span>🪶</span></a><span> off-the-shelf 모듈 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.304ex" height="2.364ex" role="img" focusable="false" viewBox="0 -750 2786.5 1045" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.667ex;"><defs><path id="MJX-2-TEX-I-1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path id="MJX-2-TEX-I-1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path id="MJX-2-TEX-I-1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path><path id="MJX-2-TEX-I-1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path id="MJX-2-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-2-TEX-N-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path><path id="MJX-2-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D447" xlink:href="#MJX-2-TEX-I-1D447"></use></g><g data-mml-node="TeXAtom" transform="translate(617,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="1D45C" xlink:href="#MJX-2-TEX-I-1D45C"></use></g><g data-mml-node="mi" transform="translate(485,0)"><use data-c="1D453" xlink:href="#MJX-2-TEX-I-1D453"></use></g><g data-mml-node="mi" transform="translate(1035,0)"><use data-c="1D460" xlink:href="#MJX-2-TEX-I-1D460"></use></g></g></g><g data-mml-node="mo" transform="translate(1730.5,0)"><use data-c="28" xlink:href="#MJX-2-TEX-N-28"></use></g><g data-mml-node="mo" transform="translate(2119.5,0)"><use data-c="22C5" xlink:href="#MJX-2-TEX-N-22C5"></use></g><g data-mml-node="mo" transform="translate(2397.5,0)"><use data-c="29" xlink:href="#MJX-2-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>T</mi><mrow data-mjx-texclass="ORD"><mi>o</mi><mi>f</mi><mi>s</mi></mrow></msub><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">T_{ofs}(\cdot)</script><span>와 확장 모듈 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.136ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2712.2 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-3-TEX-I-1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path id="MJX-3-TEX-I-1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path><path id="MJX-3-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-3-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-3-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-3-TEX-N-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path><path id="MJX-3-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D447" xlink:href="#MJX-3-TEX-I-1D447"></use></g><g data-mml-node="TeXAtom" transform="translate(617,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="1D452" xlink:href="#MJX-3-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(466,0)"><use data-c="1D465" xlink:href="#MJX-3-TEX-I-1D465"></use></g><g data-mml-node="mi" transform="translate(1038,0)"><use data-c="1D461" xlink:href="#MJX-3-TEX-I-1D461"></use></g></g></g><g data-mml-node="mo" transform="translate(1656.2,0)"><use data-c="28" xlink:href="#MJX-3-TEX-N-28"></use></g><g data-mml-node="mo" transform="translate(2045.2,0)"><use data-c="22C5" xlink:href="#MJX-3-TEX-N-22C5"></use></g><g data-mml-node="mo" transform="translate(2323.2,0)"><use data-c="29" xlink:href="#MJX-3-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>T</mi><mrow data-mjx-texclass="ORD"><mi>e</mi><mi>x</mi><mi>t</mi></mrow></msub><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">T_{ext}(\cdot)</script><span>의 출력을 결합하기 위해 아래와 같이 가중합 메커니즘을 사용한다:</span></p></li></ul><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n1984" cid="n1984" mdtype="math_block" data-math-tag-before="0" data-math-tag-after="1" data-math-labels="[]"><div class="md-rawblock-container md-math-container" tabindex="-1"><mjx-container class="MathJax" jax="SVG" display="true" width="full" style="min-width: 64.169ex; position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2.712ex" role="img" focusable="false" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.79ex; min-width: 64.169ex;"><defs><path id="MJX-14-TEX-I-1D43B" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path id="MJX-14-TEX-I-1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path><path id="MJX-14-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-14-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-14-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-14-TEX-I-1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path id="MJX-14-TEX-I-1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path id="MJX-14-TEX-I-1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path><path id="MJX-14-TEX-I-1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path id="MJX-14-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-14-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-14-TEX-N-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path><path id="MJX-14-TEX-I-1D70E" d="M184 -11Q116 -11 74 34T31 147Q31 247 104 333T274 430Q275 431 414 431H552Q553 430 555 429T559 427T562 425T565 422T567 420T569 416T570 412T571 407T572 401Q572 357 507 357Q500 357 490 357T476 358H416L421 348Q439 310 439 263Q439 153 359 71T184 -11ZM361 278Q361 358 276 358Q152 358 115 184Q114 180 114 178Q106 141 106 117Q106 67 131 47T188 26Q242 26 287 73Q316 103 334 153T356 233T361 278Z"></path><path id="MJX-14-TEX-I-1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path><path id="MJX-14-TEX-I-1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path><path id="MJX-14-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-14-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-14-TEX-N-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(0.019306,-0.019306) translate(0, -849.3)"><g data-mml-node="math"><g data-mml-node="mtable" transform="translate(2078,0) translate(-2078,0)"><g transform="translate(0 849.3) matrix(1 0 0 -1 0 0) scale(51.8)"><svg data-table="true" preserveAspectRatio="xMidYMid" viewBox="12103.3 -849.3 1 1198.7"><g transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mlabeledtr" transform="translate(0,-54.4)"><g data-mml-node="mtd"><g data-mml-node="msup"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-14-TEX-I-1D43B"></use></g><g data-mml-node="TeXAtom" transform="translate(973.9,413) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="1D459" xlink:href="#MJX-14-TEX-I-1D459"></use></g><g data-mml-node="mo" transform="translate(298,0)"><use data-c="2B" xlink:href="#MJX-14-TEX-N-2B"></use></g><g data-mml-node="mn" transform="translate(1076,0)"><use data-c="31" xlink:href="#MJX-14-TEX-N-31"></use></g></g></g><g data-mml-node="mo" transform="translate(2416,0)"><use data-c="3D" xlink:href="#MJX-14-TEX-N-3D"></use></g><g data-mml-node="msub" transform="translate(3471.8,0)"><g data-mml-node="mi"><use data-c="1D447" xlink:href="#MJX-14-TEX-I-1D447"></use></g><g data-mml-node="TeXAtom" transform="translate(617,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="1D45C" xlink:href="#MJX-14-TEX-I-1D45C"></use></g><g data-mml-node="mi" transform="translate(485,0)"><use data-c="1D453" xlink:href="#MJX-14-TEX-I-1D453"></use></g><g data-mml-node="mi" transform="translate(1035,0)"><use data-c="1D460" xlink:href="#MJX-14-TEX-I-1D460"></use></g></g></g><g data-mml-node="mo" transform="translate(5202.3,0)"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use></g><g data-mml-node="msup" transform="translate(5591.3,0)"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-14-TEX-I-1D43B"></use></g><g data-mml-node="mi" transform="translate(973.9,413) scale(0.707)"><use data-c="1D459" xlink:href="#MJX-14-TEX-I-1D459"></use></g></g><g data-mml-node="mo" transform="translate(6825.9,0)"><use data-c="29" xlink:href="#MJX-14-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(7437.1,0)"><use data-c="22C5" xlink:href="#MJX-14-TEX-N-22C5"></use></g><g data-mml-node="mi" transform="translate(7937.3,0)"><use data-c="1D70E" xlink:href="#MJX-14-TEX-I-1D70E"></use></g><g data-mml-node="mo" transform="translate(8508.3,0)"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(8897.3,0)"><use data-c="1D464" xlink:href="#MJX-14-TEX-I-1D464"></use></g><g data-mml-node="mo" transform="translate(9613.3,0)"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use></g><g data-mml-node="msup" transform="translate(10002.3,0)"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-14-TEX-I-1D43B"></use></g><g data-mml-node="mi" transform="translate(973.9,413) scale(0.707)"><use data-c="1D459" xlink:href="#MJX-14-TEX-I-1D459"></use></g></g><g data-mml-node="mo" transform="translate(11236.9,0)"><use data-c="29" xlink:href="#MJX-14-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(11625.9,0)"><use data-c="29" xlink:href="#MJX-14-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(12237.1,0)"><use data-c="2B" xlink:href="#MJX-14-TEX-N-2B"></use></g><g data-mml-node="msub" transform="translate(13237.3,0)"><g data-mml-node="mi"><use data-c="1D447" xlink:href="#MJX-14-TEX-I-1D447"></use></g><g data-mml-node="TeXAtom" transform="translate(617,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="1D452" xlink:href="#MJX-14-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(466,0)"><use data-c="1D465" xlink:href="#MJX-14-TEX-I-1D465"></use></g><g data-mml-node="mi" transform="translate(1038,0)"><use data-c="1D461" xlink:href="#MJX-14-TEX-I-1D461"></use></g></g></g><g data-mml-node="mo" transform="translate(14893.6,0)"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use></g><g data-mml-node="msup" transform="translate(15282.6,0)"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-14-TEX-I-1D43B"></use></g><g data-mml-node="mi" transform="translate(973.9,413) scale(0.707)"><use data-c="1D459" xlink:href="#MJX-14-TEX-I-1D459"></use></g></g><g data-mml-node="mo" transform="translate(16517.1,0)"><use data-c="29" xlink:href="#MJX-14-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(17128.4,0)"><use data-c="22C5" xlink:href="#MJX-14-TEX-N-22C5"></use></g><g data-mml-node="mo" transform="translate(17628.6,0)"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use></g><g data-mml-node="mn" transform="translate(18017.6,0)"><use data-c="31" xlink:href="#MJX-14-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(18739.8,0)"><use data-c="2212" xlink:href="#MJX-14-TEX-N-2212"></use></g><g data-mml-node="mi" transform="translate(19740,0)"><use data-c="1D70E" xlink:href="#MJX-14-TEX-I-1D70E"></use></g><g data-mml-node="mo" transform="translate(20311,0)"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(20700,0)"><use data-c="1D464" xlink:href="#MJX-14-TEX-I-1D464"></use></g><g data-mml-node="mo" transform="translate(21416,0)"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use></g><g data-mml-node="msup" transform="translate(21805,0)"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-14-TEX-I-1D43B"></use></g><g data-mml-node="mi" transform="translate(973.9,413) scale(0.707)"><use data-c="1D459" xlink:href="#MJX-14-TEX-I-1D459"></use></g></g><g data-mml-node="mo" transform="translate(23039.6,0)"><use data-c="29" xlink:href="#MJX-14-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(23428.6,0)"><use data-c="29" xlink:href="#MJX-14-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(23817.6,0)"><use data-c="29" xlink:href="#MJX-14-TEX-N-29"></use></g></g></g></g></svg><svg data-labels="true" preserveAspectRatio="xMaxYMid" viewBox="1278 -849.3 1 1198.7"><g data-labels="true" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mtd" id="mjx-eqn:1" transform="translate(0,695.6)"><text data-id-align="true"></text><g data-idbox="true" transform="translate(0,-750)"><g data-mml-node="mtext"><use data-c="28" xlink:href="#MJX-14-TEX-N-28"></use><use data-c="31" xlink:href="#MJX-14-TEX-N-31" transform="translate(389,0)"></use><use data-c="29" xlink:href="#MJX-14-TEX-N-29" transform="translate(889,0)"></use></g></g></g></g></svg></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true"><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><msup><mi>H</mi><mrow data-mjx-texclass="ORD"><mi>l</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><msub><mi>T</mi><mrow data-mjx-texclass="ORD"><mi>o</mi><mi>f</mi><mi>s</mi></mrow></msub><mo stretchy="false">(</mo><msup><mi>H</mi><mi>l</mi></msup><mo stretchy="false">)</mo><mo>⋅</mo><mi>σ</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">(</mo><msup><mi>H</mi><mi>l</mi></msup><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>+</mo><msub><mi>T</mi><mrow data-mjx-texclass="ORD"><mi>e</mi><mi>x</mi><mi>t</mi></mrow></msub><mo stretchy="false">(</mo><msup><mi>H</mi><mi>l</mi></msup><mo stretchy="false">)</mo><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>σ</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">(</mo><msup><mi>H</mi><mi>l</mi></msup><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd></mlabeledtr></mtable></math></mjx-assistive-mml></mjx-container></div></div><ul><li><p><a title="where Hl is the output of l-th layer and w is the weighting block, a fully-connected layer with size 768 × 1 that outputs the weight used to do a weighted summation of embedding vectors from the two modules." ><span>🪶</span></a><span> 여기서 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="2.793ex" height="1.932ex" role="img" focusable="false" viewBox="0 -853.7 1234.6 853.7" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: 0px;"><defs><path id="MJX-4-TEX-I-1D43B" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path id="MJX-4-TEX-I-1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-4-TEX-I-1D43B"></use></g><g data-mml-node="mi" transform="translate(973.9,363) scale(0.707)"><use data-c="1D459" xlink:href="#MJX-4-TEX-I-1D459"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>H</mi><mi>l</mi></msup></math></mjx-assistive-mml></mjx-container><script type="math/tex">H^l</script><span>은 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="0.674ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 298 705" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-5-TEX-I-1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D459" xlink:href="#MJX-5-TEX-I-1D459"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">l</script><span>번째 레이어의 출력이며, </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.62ex" height="1.027ex" role="img" focusable="false" viewBox="0 -443 716 454" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-6-TEX-I-1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D464" xlink:href="#MJX-6-TEX-I-1D464"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">w</script><span>는 가중 블록으로, 두 모듈에서 임베딩 벡터의 가중 합을 수행하는 데 사용되는 가중치를 출력하는 크기가 768 × 1인 완전히 연결된 레이어이다.</span></p></li><li><p><a title="To make the output magnitude of the weighting block consistent, a sigmoid function σ(·) is used to constrain the output." ><span>🪶</span></a><span> 가중 블록의 출력 크기를 일관되게 만들기 위해 시그모이드 함수 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.681ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1627 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-7-TEX-I-1D70E" d="M184 -11Q116 -11 74 34T31 147Q31 247 104 333T274 430Q275 431 414 431H552Q553 430 555 429T559 427T562 425T565 422T567 420T569 416T570 412T571 407T572 401Q572 357 507 357Q500 357 490 357T476 358H416L421 348Q439 310 439 263Q439 153 359 71T184 -11ZM361 278Q361 358 276 358Q152 358 115 184Q114 180 114 178Q106 141 106 117Q106 67 131 47T188 26Q242 26 287 73Q316 103 334 153T356 233T361 278Z"></path><path id="MJX-7-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-7-TEX-N-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path><path id="MJX-7-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D70E" xlink:href="#MJX-7-TEX-I-1D70E"></use></g><g data-mml-node="mo" transform="translate(571,0)"><use data-c="28" xlink:href="#MJX-7-TEX-N-28"></use></g><g data-mml-node="mo" transform="translate(960,0)"><use data-c="22C5" xlink:href="#MJX-7-TEX-N-22C5"></use></g><g data-mml-node="mo" transform="translate(1238,0)"><use data-c="29" xlink:href="#MJX-7-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\sigma(\cdot)</script><span>를 사용하여 출력을 제한한다.</span></p><ul><li><p><span>Pointer Generator Networks의 pgn gate와 동일한 연산</span></p></li></ul></li><li><p><a title="The size of the extension module is flexible as long as its output shape matches that of the off-the-shelf module." ><span>🪶</span></a><span> 확장 모듈의 크기는 출력 형태가 off-the-shelf 모듈의 것과 일치하는 한 유연하다.</span></p></li></ul><h2 id='4-performance-evaluation-of-exbert'><span>4. Performance Evaluation of ExBERT</span></h2><h3 id='41-experiment-setup'><span>4.1. Experiment setup</span></h3><figure><table><thead><tr><th>&nbsp;</th><th><span>Pre-training</span></th><th><span>Fine-tuning</span></th></tr></thead><tbody><tr><td><span>Data</span></td><td><span>17G-Bio</span><br/><span>(ClinicalKey(2GB)+PubMed Central(15GB))</span></td><td><span>MTL-Bioinformatics-2016</span></td></tr><tr><td><span>Backbone Model</span></td><td><span>bert-base-uncased</span></td><td><span>bert-base-uncased</span></td></tr><tr><td><span>Input Length</span></td><td><span>128</span></td><td><span>128</span></td></tr><tr><td><span>Epoch</span></td><td><span>-</span></td><td><span>3</span></td></tr><tr><td><span>Batch</span></td><td><span>256</span></td><td><span>20</span></td></tr><tr><td><span>Optimizer</span></td><td><span>Adam</span></td><td><span>Adam</span></td></tr><tr><td><span>lr</span></td><td><span>1E-04</span></td><td><span>(top-3 layer) 1E-05,</span><br/><span>(others) 1E-04</span></td></tr></tbody></table></figure><h4 id='exbert-adaptive-pre-training'><span>exBERT Adaptive Pre-training</span></h4><ul><li><p><a title="All instances of BERT in this section refer to Bert-base-uncased (BERT)." ><span>🪶</span></a><span> 이 섹션의 모든 BERT 인스턴스는 Bert-base-uncased를 가리킨다.</span></p></li><li><p><a title="For exBERT, the ‘extension module' uses the same transformer-based architecture as BERT (Devlin et al., 2018) with smaller sizes." ><span>🪶</span></a><span> exBERT의 ‘확장 모듈’은 BERT와 동일한 트랜스포머 기반 아키텍처를 사용하며(Devlin et al., 2018), 크기가 작다.</span></p></li><li><p><a title="The ‘off-the-shelf' part of exBERT is a copy of the BERT model." ><span>🪶</span></a><span> exBERT의 ‘off-the-shelf’ 부분은 BERT 모델의 사본이다.</span></p></li><li><p><a title="During pre-training, this part remains completely fixed, and only the extension module and the weighting block are updated (except for a special experiment related to Figure 3(b))." ><span>🪶</span></a><span> 사전 학습 중에 이 부분은 완전히 고정되어 있으며, 확장 모듈과 가중 블록만 업데이트된다(그림 3(b)와 관련된 특수 실험을 제외).</span></p></li><li><p><a title="Training uses the Adam optimizer (learning rate =1e−04, β1 =0.9, and β2 =0.999) on 4 V100 NVIDIA GPUs. The batch size and input length are set to 256 and 128, respectively." ><span>🪶</span></a><span> 학습에는 4개의 V100 NVIDIA GPU에서 Adam 옵티마이저(lr = 1e−04, </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="2.268ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1002.6 899" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-8-TEX-I-1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path><path id="MJX-8-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D6FD" xlink:href="#MJX-8-TEX-I-1D6FD"></use></g><g data-mml-node="mn" transform="translate(599,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-8-TEX-N-31"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>β</mi><mn>1</mn></msub></math></mjx-assistive-mml></mjx-container><script type="math/tex">\beta_1</script><span> = 0.9 및 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="2.268ex" height="2.034ex" role="img" focusable="false" viewBox="0 -705 1002.6 899" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-9-TEX-I-1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path><path id="MJX-9-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D6FD" xlink:href="#MJX-9-TEX-I-1D6FD"></use></g><g data-mml-node="mn" transform="translate(599,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-9-TEX-N-32"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>β</mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container><script type="math/tex">\beta_2</script><span> = 0.999)를 사용합니다. 배치 크기와 입력 길이는 각각 256과 128로 설정된다.</span></p></li><li><p><a title="We construct a biomedical corpus (which we call 17G-Bio in this paper) consisting of 17 GB articles from ClinicalKey (Clinicalkey) (2GB) and PubMed Central (PMC) (15GB)." ><span>🪶</span></a><span> ClinicalKey (Clinicalkey) (2GB) 및 PubMed Central (PMC) (15GB)에서 가져온 17GB 논문으로 구성된 생의학 말뭉치를 구축한다(이 논문에서는 17G-Bio라고 한다).</span></p></li><li><p><a title="All or part of this corpus is used for the adaptive pre-training discussed in the next two sections." ><span>🪶</span></a><span> 이 말뭉치의 전체 또는 일부는 다음 두 섹션에서 논의되는 적응형 사전 학습에 사용된다.</span></p></li></ul><h4 id='fine-tuning'><span>Fine-tuning</span></h4><ul><li><p><a title="We compare different pre-trained models' performance after fine-tuning them on two downstream tasks: named entity recognition (NER) and relation extraction (RE)." ><span>🪶</span></a><span> 우리는 미세 조정된 여러 사전 학습 모델의 성능을 비교한다. 이 모델들은 NER 및 관계 추출과 같은 두 가지 다운스트림 작업에서 미세 조정된다.</span></p></li><li><p><a title="In other words, all scores in this paper are models' performance on the downstream tasks." ><span>🪶</span></a><span> 다시 말해, 이 논문의 모든 점수는 다운스트림 작업에서의 모델 성능이다.</span></p></li><li><p><a title="Specifically, all pre-trained models are fine-tuned with the same setting: only the top three layers are fine-tuned with a learning rate of 10−5 and batch size of 20 for 3 epochs on the MTL-Bioinformatics-2016 dataset (MTL)." ><span>🪶</span></a><span> 구체적으로, 모든 사전 학습된 모델은 동일한 설정으로 미세 조정된다: 상위 세 개의 레이어만 미세 조정되며, lr은 MTL-Bioinformatics-2016 데이터셋(MTL)에서 배치 크기 20으로 3 에폭 동안 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.495ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1986.7 886" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><defs><path id="MJX-10-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-10-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-10-TEX-N-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path id="MJX-10-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-10-TEX-N-31"></use><use data-c="30" xlink:href="#MJX-10-TEX-N-30" transform="translate(500,0)"></use></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><use data-c="2212" xlink:href="#MJX-10-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(778,0)"><use data-c="35" xlink:href="#MJX-10-TEX-N-35"></use></g></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>10</mn><mrow data-mjx-texclass="ORD"><mo>−</mo><mn>5</mn></mrow></msup></math></mjx-assistive-mml></mjx-container><script type="math/tex">10^{-5}</script><span>입니다.</span></p></li><li><p><a title="We first examine exBERT pre-trained under a limited corpus (sample randomly 5% data from the 17G-Bio) and computation resources (update model on the sampled corpus for three epochs), as a function of the extension module size." ><span>🪶</span></a><span> 먼저 확장 모듈 크기의 함수로 </span><mark style="background: #eeeeee; color:#3b454e;"><span>제한된 말뭉치(17G-Bio에서 무작위로 5% 데이터 샘플링)</span></mark><span>와 계산 리소스(샘플링된 말뭉치에서 모델을 3 에폭에 걸쳐 업데이트)에서 사전 학습된 exBERT를 검토한다.</span></p></li><li><p><a title="We test five different extension module sizes, 16.3%, 23.4%, 33.2%, 66.3% and 100%, of the off-the-shelf module size (with hidden sizes of 120, 180, 252, 504, 768 and feed-forward layer sizes of 512, 720, 1024, 2048, 3072, respectively)." ><span>🪶</span></a><span> 우리는 off-the-shelf 모듈 크기의 16.3%, 23.4%, 33.2%, 66.3% 및 100%에 해당하는 다섯 가지 다른 확장 모듈 크기를 테스트한다(각각 120, 180, 252, 504, 768의 숨겨진 크기 및 512, 720, 1024, 2048, 3072의 feed-forward 레이어 크기).</span></p></li><li><p><a title="The performance of exBERT is compared against the original BERT and an our own trained version of BioBERT, rrBioBERT (reduced-resource BioBERT) pre-trained with the aforementioned limited resources but in the same way of BioBERT (Lee et al., 2019)." ><span>🪶</span></a><span> exBERT의 성능은 원래 BERT, 직접 학습한 BioBERT, 제한된 리소스로 BioBERT(Lee et al., 2019)와 동일한 방식으로 사전학습된 rrBioBERT(reduced-resource BioBERT)와 비교된다.</span></p></li></ul><h3 id='42-impact-of-the-extension-module-size'><span>4.2. Impact of the Extension Module Size</span></h3><figure><table><thead><tr><th style='text-align:center;' ><span>Figure 2. </span><a title="Performance (macro F1-score on the NER task) of exBERT model pre-trained on 5% of the 17G-Bio corpus as a function of extension module sizes, compared against BERT and rrBioBERT. The blue and black curves represent the exBERT model with and without vocabulary extension respectively." ><span>🪶</span></a><span> 확장 모듈 크기의 함수로 17G-Bio 말뭉치의 5%에서 사전학습된 exBERT 모델의 성능(NER에 대한 macro f1-score)을 BERT 및 rrBioBERT와 비교했다. 파란색과 검은색 곡선은 각각 어휘 확장이 있거나 없는 exBERT 모델을 나타낸다.</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="./_attachements/image-20240609003037794.png" referrerpolicy="no-referrer" alt="image-20240609003037794"></td></tr><tr><td style='text-align:center;' ><img src="./_attachements/image-20240609003202436.png" referrerpolicy="no-referrer" alt="image-20240609003202436"></td></tr></tbody></table></figure><ul><li><p><a title="As shown in Figure 2, exBERT outperforms the rrBioBERT model, even with a quite small extension module size (16.3%)." ><span>🪶</span></a><span> 그림 2에서 보듯이, exBERT는 확장 모듈 크기가 매우 작은 경우에도(rrBioBERT 모델을) 능가한다(16.3%).</span></p></li><li><p><a title="This demonstrates that exBERT’s pre-training using the extension module is effective and efficient, and the performance is stable when there is a sufficient number of parameters in the extension model." ><span>🪶</span></a><span> 이는 exBERT의 확장 모듈을 사용한 사전 학습이 효과적이고 효율적임을 보여주며, 확장 모델에 충분한 매개 변수가 있는 경우 성능이 안정적임을 보여준다.</span></p></li><li><p><a title="In the rest of this paper, we set the size of extension modules at 33.2%." ><span>🪶</span></a><span> 이 논문의 나머지 부분에서는 확장 모듈의 크기를 33.2%(최고 성능)로 설정한다.</span></p></li><li><p><a title="Further, under a separate experiment, we have studied a scenario where we include the extension vocabulary and the corresponding embedding layer but do not include the extension module (0% in Figure 2)." ><span>🪶</span></a><span> 또한 별도의 실험에서는 확장 어휘와 해당 임베딩 레이어를 포함하지만 확장 모듈을 포함하지 않는 시나리오를 연구했다(그림 2의 0%).</span></p></li><li><p><a title="We then update the whole model with the aforementioned limited resources. We find that this setting yields poor performance, showing that the extension module is crucial to make the original and extension vocabularies work together." ><span>🪶</span></a><span> 그런 다음 언급된 제한된 리소스로 전체 모델을 업데이트했다. 이 설정은 성능이 낮은 것으로 나타났으며, 이는 확장 모듈이 원래와 확장 어휘를 함께 작동시키는 데 중요함을 보여준다.</span></p></li><li><p><a title="Furthermore, we have experimented with the paradigm that pre-trains only the extension module without the extension vocabulary (black curve in Figure 2)." ><span>🪶</span></a><span> 또한 그림 2의 검은색 곡선처럼 확장 어휘 없이 확장 모듈만 사전 학습하는 패러다임을 실험했다.</span></p></li><li><p><a title="The result shows the exBERT’s improvement in performance comes not only from the extension module, but also from the additional domain-specific vocabulary." ><span>🪶</span></a><span> 결과는 exBERT의 성능 향상이 확장 모듈뿐만 아니라 추가 도메인별 어휘에서도 나온다는 것을 보여준다.</span></p></li></ul><h3 id='43-impact-of-training-time-on-performance'><span>4.3. Impact of Training Time on Performance</span></h3><figure><table><thead><tr><th style='text-align:center;' ><span>Table 2. Numerical data of Figure 3</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="./_attachements/image-20240609004514111.png" referrerpolicy="no-referrer" alt="image-20240609004514111"></td></tr></tbody></table></figure><p>&nbsp;</p><ul><li><p><a title="We next examine exBERT’s performance as a function of training time." ><span>🪶</span></a><span> 다음으로, 학습 시간의 기능으로써 exBERT의 성능을 조사한다.</span></p></li><li><p><a title="We conduct adaptive pre-training of exBERT for 24 hours on the whole 17G-Bio corpus." ><span>🪶</span></a><span> 전체 17G-Bio 말뭉치에 대해 exBERT를 24시간 동안 적응형 사전학습한다.</span></p></li><li><p><a title="For comparison, we also pre-train oiBioBERT (our-implemented BioBERT) with the same hardware and corpus but in the same manner as the way of BioBERT (Lee et al., 2019)." ><span>🪶</span></a><span> 비교를 위해 동일한 하드웨어와 말뭉치로 oiBioBERT(직접 구현한 BioBERT)도 BioBERT (Lee et al., 2019)의 방식과 동일하게 사전 학습한다.</span></p></li><li><p><a title="For every 4 hours of pre-training, we compare the performance of exBERT and oiBioBERT." ><span>🪶</span></a><span> 매 4시간마다 exBERT와 oiBioBERT의 성능을 비교한다.</span></p></li><li><p><a title="Because the addition of the extension module incurs additional computation, given this 24-hour pre-training, the oiBioBERT model proceeds through a larger portion (34%) of the corpus than exBERT (24%)." ><span>🪶</span></a><span> 확장 모듈을 추가하면 추가 연산이 발생하기 때문에 이 24시간 사전학습을 감안할 때 oiBioBERT 모델(34%)은 exBERT(24%)보다 더 많은 코퍼스를 진행한다.</span></p><ul><li><p><mark style='background: #eeeeee; color:#3b454e;'><span>exBERT는 oiBioBERT보다 연산이 느려 같은 시간 내 학습할 수 있는 데이터 양이 적다.</span></mark></p></li></ul></li></ul><figure><table><thead><tr><th style='text-align:center;' ><span>Figure 3. The NER performance for exBERT and oiBioBERT pre-trained on the whole 17G-Bio corpus.</span><br/><span>(a) </span><a title="Models pre-trained with varying amounts of training time" ><span>🪶</span></a><span> 다양한 학습 시간으로 사전학습된 모델</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="./_attachements/image-20240609004308931.png" referrerpolicy="no-referrer" alt="image-20240609004308931"></td></tr></tbody></table></figure><ul><li><p><a title="Nevertheless, as Figure 3(a) shows, for all amounts of pre-training time, exBERT outperforms oiBioBERT." ><span>🪶</span></a><span> 그럼에도 불구하고, 그림 3(a)에서 볼 수 있듯이, 모든 사전 학습 시간에 대해 exBERT가 oiBioBERT보다 우수한 성능을 보인다.</span></p></li><li><p><a title="This may be surprising given that exBERT takes less data due to increased computation (1.4x)." ><span>🪶</span></a><span> 이는 증가된 계산으로 인해 exBERT가 더 적은 데이터를 사용함에도 불구하고 놀랄만한 일일 수 있다(1.4배).</span></p></li><li><p><a title="We believe that the superior performance of exBERT reflects a significant benefit accrued by having the new domain’s vocabulary explicitly represented in the exBERT model." ><span>🪶</span></a><span> exBERT의 우수한 성능은 새로운 도메인의 어휘가 명시적으로 exBERT 모델에 표현되어 있어서 상당한 이점이 누적되었다는 것을 나타낸다.</span></p></li><li><p><a title="We also pre-train the models for a longer time on the whole 17G-Bio corpus." ><span>🪶</span></a><span> 우리는 또한 전체 17G-Bio 말뭉치에 대해 모델을 더 오랜 시간 사전 학습한다.</span></p></li><li><p><a title="After pre-training the exBERT model for 24 hours (only updating the extension embedding layer and modules), we continually pre-train the whole exBERT model, consisting of both the off-the-shelf and extension modules, recognizing that the larger corpus may be able to support the training of the whole model." ><span>🪶</span></a><span> exBERT 모델을 24시간 동안 사전 학습한 후(확장 임베딩 레이어와 모듈만 업데이트), 전체 exBERT 모델을 계속해서 사전 학습한다. 이것은 더 큰 말뭉치가 전체 모델의 학습을 지원할 수 있을 것이라는 것을 인식한 것이다.</span></p></li></ul><figure><table><thead><tr><th style='text-align:center;' ><span>Figure 3. The NER performance for exBERT and oiBioBERT pre-trained on the whole 17G-Bio corpus.</span><br/><span>(b) </span><a title="Performance comparison against additional models, where for exBERT both the off-the-shelf and extension modules are updated. The size of a disc corresponds to the model size, and the axis is in a log scale. The discs with a black dot inside indicate models pre-trained by the authors of this paper." ><span>🪶</span></a><span> exBERT의 경우 기성모듈 및 확장 모듈이 모두 업데이트되는 추가 모델과의 성능 비교. 디스크의 크기는 모델의 크기에 해당하며 축은 로그 눈금이다. 내부에 검은 점이 있는 디스크는 이 논문의 저자가 사전학습한  나타낸다.</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="./_attachements/image-20240609004923228.png" referrerpolicy="no-referrer" alt="image-20240609004923228"></td></tr></tbody></table></figure><ul><li><p><a title="We compare the results with three baselines, BERT (gray), BioBERT (green), and SciBERT (pink) (all of them are directly downloaded from their open-source implementations) as shown in Figure 3(b)." ><span>🪶</span></a><span> 우리는 그림 3(b)에 나타난 것처럼 세 가지 베이스라인인 BERT(회색), BioBERT(녹색), SciBERT(분홍색)의 결과를 비교한다(모두 오픈 소스 구현에서 직접 다운로드되었다).</span></p></li><li><p><a title="For comparison, we convert the training time of these models to the time it may take with the same computing platform of this work (4 V100 GPUs), and assume that a TPU core has the same computing power as 2 V100 GPUs." ><span>🪶</span></a><span> 비교를 위해 이러한 모델의 학습 시간을 이 작업의 동일한 컴퓨팅 플랫폼에서 걸릴 시간으로 변환하고, TPU 코어가 2개의 V100 GPU와 동일한 컴퓨팅 파워를 가지고 있다고 가정한다.</span></p></li><li><p><a title="As shown in Figure 3(b), for a given training time, exBERT always outperforms oiBioBERT." ><span>🪶</span></a><span> 그림 3(b)에 나타난 바와 같이, 주어진 학습 시간에 대해 exBERT는 항상 oiBioBERT보다 우수한 성능을 보인다.</span></p></li><li><p><a title="We also find the exBERT pre-trained with lower resources (4 V100 GPUs, 64 hrs) outperforms the original BioBERT (8 V100 GPUs, 240 hrs, or 4 V100 GPUs 480 hrs in Figure 3(b))." ><span>🪶</span></a><span> 또한 낮은 리소스로 사전 학습된 exBERT(4 V100 GPUs, 64 시간)가 원래의 BioBERT(8 V100 GPUs, 240 시간 또는 4 V100 GPUs, 480 시간 그림 3(b) 참조)보다 우수한 성능을 보인다.</span></p></li><li><p><a title="We additionally compare the size of the different models, represented as the disc size in Figure 3(b)." ><span>🪶</span></a><span> 우리는 또한 그림 3(b)에서 디스크 크기로 표시된 다른 모델의 크기를 비교한다.</span></p></li><li><p><a title="The size of exBERT model (138 million parameters, with the extension modules' size being 33.2% of the off-the-shelf modules' size) is generally larger than the original BERT (110 million parameters) due to the added extension embedding layer and modules." ><span>🪶</span></a><span> 확장 모듈의 크기가 기성 모듈의 크기의 33.2%인 exBERT 모델의 크기는 일반적으로 추가된 확장 임베딩 레이어 및 모듈 때문에 원래의 BERT보다 크다.</span></p><ul><li><p><span>exBERT 모델의 크기 = 1억 3천 8백만 개 매개변수</span></p></li><li><p><span>BERT 모델의 크기 = 1억 개 매개변수</span></p></li></ul></li><li><p><a title="Although we provide model sizing information here, this paper focuses on maximizing performance under constrained computation and data rather than minimizing model size." ><span>🪶</span></a><span> 여기서 모델 크기 정보를 제공하지만,  </span><mark style='background: #eeeeee; color:#3b454e;'><span>이 논문은 모델 크기를 최소화하는 대신 제한된 계산 및 데이터 하에서 성능을 극대화하는 데 중점을 둔다.</span></mark></p></li><li><p><a title="As future work, the model size could be reduced by, e.g., model compression methods (Gordon et al., 2020) or using a smaller distilled version of BERT (Sanh et al., 2019) as the off-the-shelf module." ><span>🪶</span></a><span> 향후 작업으로, 모델 크기를 줄일 수 있다. 예를 들어, 모델 압축 방법(Gordon et al., 2020)을 사용하거나, 기성 모듈로 더 작은 압축된 버전의 BERT(Sanh et al., 2019)를 사용할 수 있다.</span></p></li></ul><h2 id='5-conclusion'><span>5. Conclusion</span></h2><ul><li><p><a title="exBERT is proposed to maximize the use of an elaborately pre-trained model for a general domain by empowering the model’s continual learning ability to adapt and shift the learned representation for a new domain with a low training cost." ><span>🪶</span></a><span> exBERT는 모델의 지속적인 학습 능력을 강화하여 새로운 도메인에 대한  </span><mark style='background: #eeeeee; color:#3b454e;'><span>학습 비용을 낮추고 학습된 표현을 적응 및 이동시키는 것을 통해</span></mark><span> 정교하게 사전 학습된 모델을 최대한 활용하기 위해 제안되었습니다.</span></p></li><li><p><a title="exBERT adds a new domain-specific vocabulary and the corresponding embedding layer, as well as a small extension module to the original unmodified model." ><span>🪶</span></a><span> exBERT는 원본 수정되지 않은 모델에  </span><mark style='background: #eeeeee; color:#3b454e;'><span>새로운 도메인별 어휘 및 해당 임베딩 레이어와 작은 확장 모듈을 추가</span></mark><span>합니다.</span></p></li><li><p><a title="The exBERT approach greatly improves the efficiency of adapting a pre-training model for a new target domain." ><span>🪶</span></a><span> exBERT 접근 방식은 사전 학습 모델을  </span><mark style='background: #eeeeee; color:#3b454e;'><span>새로운 대상 도메인에 적응시키는 효율성을 크게 향상</span></mark><span>시킵니다.</span></p></li><li><p><a title="With exBERT we can reuse pre-trained language models for new domains under limited training resources." ><span>🪶</span></a><span> exBERT를 사용하면  </span><mark style='background: #eeeeee; color:#3b454e;'><span>제한된 학습 리소스 하에서 새로운 도메인을 위해 사전 학습된 언어 모델을 재사용할 수 있습니다.</span></mark></p></li><li><p><a title="The approach could be particularly attractive to ad-hoc and special-purpose domains with unique vocabularies, such as some fields in law, medicine, and engineering, which have very limited training data for model pre-training and demand fast turnaround training." ><span>🪶</span></a><span> 이 접근 방식은 법률, 의학 및 공학 분야와 같이 고유한 어휘를 갖는 무작위 및 특수 목적 도메인에 특히 매력적일 수 있습니다. 이러한 분야는 모델 사전 학습을 위한 매우 제한적인 학습 데이터를 갖고 있으며 빠른 턴어라운드 학습을 요구합니다.</span></p></li></ul><h2 id='a-appendix'><span>A. Appendix</span></h2><ul><li><p><a title="We provide our results on the RE task mentioned in Section 4 in the same formats as Figure 2 and 3." ><span>🪶</span></a><span> 저희는 Section 4에서 언급된 RE 작업에 대한 결과를 Figure 2와 3과 같은 형식으로 제공합니다.</span></p></li><li><p><a title="We find the performance of the models on the RE task follows a similar trend to the NER task." ><span>🪶</span></a><span> 저희는 모델의 성능이 NER 작업과 유사한 추세를 따른다는 것을 발견했습니다.</span></p></li><li><p><a title="In particular, exBERT outperforms the rrBioBERT and oiBioBERT under the same pre-training conditions." ><span>🪶</span></a><span> 특히, exBERT는 동일한 사전 학습 조건에서 rrBioBERT와 oiBioBERT보다 성능이 우수합니다.</span></p></li><li><p><a title="Note that following previous work (Beltagy et al., 2019; Lee et al., 2019), we use the micro F1 score here." ><span>🪶</span></a><span> 이곳에서는 이전 연구 (Beltagy et al., 2019; Lee et al., 2019)를 따라 micro F1 점수를 사용합니다.</span></p></li></ul></div></div>
+</body>
+</html>
