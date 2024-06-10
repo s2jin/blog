@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 리눅스 서버에 사용자 추가하기 + SAMBA 설정
+title: Linux 서버 사용자 추가 + SAMBA 설정
 published_date: 2023-05-18
 last_modified_date: 2023-05-18
 ---
 
 
-## 01. 서버 사용자 추가
+## 01. 리눅스 서버 사용자 추가
 
 1. 사용자를 추가한다. (adduser 명령어의 경우 홈 디렉토리도 함께 생성한다.)
 
