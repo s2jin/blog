@@ -13,6 +13,7 @@ mathjax: true
     Table of contents
   </summary>
   {: .text-gamma }
+1. TOC
 {:toc}
 </details>
 
