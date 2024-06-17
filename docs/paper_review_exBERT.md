@@ -4,6 +4,7 @@ nav_enabled: false
 title: "[논문리뷰] exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources"
 published_date: 2022-05-17
 last_modified_date: 2023-06-09
+parent: Main
 mathjax: true
 ---
 

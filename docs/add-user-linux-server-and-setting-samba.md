@@ -3,6 +3,7 @@ layout: default
 title: Linux 서버 사용자 추가 + SAMBA 설정
 published_date: 2023-05-18
 last_modified_date: 2023-05-18
+parent: Main
 ---
 
 
