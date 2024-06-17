@@ -4,18 +4,21 @@ nav_enabled: false
 title: "[논문리뷰] exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources"
 published_date: 2022-05-17
 last_modified_date: 2023-06-09
-parent: Main
+parent: Papers
+grand_parent: Main
 mathjax: true
 ---
 
+<br/>
 <details markdown="block">
   <summary>
     Table of contents
   </summary>
   {: .text-gamma }
-1. TOC
+- TOC
 {:toc}
 </details>
+<br/>
 
 ```latex
 @inproceedings{tai2020exbert,
