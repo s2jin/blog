@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minimal
 title: Ubuntu에서 자소가 분리된 파일 복구하기
 published_date: 2023-03-06
 last_modified_date: 2023-03-06
