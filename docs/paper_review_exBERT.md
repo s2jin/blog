@@ -6,7 +6,13 @@ last_modified_date: 2023-06-09
 mathjax: true
 ---
 
-# exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-gamma }
+{:toc}
+</details>
 
 ```latex
 @inproceedings{tai2020exbert,
@@ -20,9 +26,6 @@ mathjax: true
 
 - **GitHub**:  https://github.com/cgmhaicenter/exBERT
 
----
-[TOC]
----
 
 ## Abstract
 
