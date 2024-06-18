@@ -1,7 +1,7 @@
 ---
 layout: minimal
 title: Linux 서버 사용자 추가 + SAMBA 설정
-nav_order: 20230518
+nav_order: 1
 published_date: 2023-05-18
 last_modified_date: 2023-05-18
 has_children: false
