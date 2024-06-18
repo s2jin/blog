@@ -196,3 +196,8 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+## Mathjax
+mathjax:
+  source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML
+  config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'
