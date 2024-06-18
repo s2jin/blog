@@ -1,10 +1,9 @@
 ---
-layout: default
-nav_enabled: false
+layout: minimal
 title: "Markdown Preview"
 published_date: 2024-06-18
 last_modified_date: 2024-06-18
-parent: Main
+has_children: false
 ---
 
 > The following document is a dummy document intended to check the rendering results of Markdown format and does not hold any meaningful content.
