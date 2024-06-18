@@ -152,15 +152,15 @@ mathjax: true
 
 - <a title="exBERT augments each layer of the original BERT (referred to as the 'off-the-shelf' module) by adding an extension module to its side as depicted in Figure 1(b)." >🪶</a> exBERT는 <mark style='background: #eeeeee; color:#3b454e;'>원래 BERT의 각 레이어(“off-the-shelf” 모듈</mark>이라고 함)을 그림 1(b)에 나와 있는 대로 측면에 확장 모듈을 추가하여 보완한다.
 
-- <a title="To combine the output from the off-the-shelf module Tofs(·) and the extension module Text(·), we use a weighted sum mechanism as below:" >🪶</a> off-the-shelf 모듈 $T_{ofs}(\cdot)$와 확장 모듈 $T_{ext}(\cdot)$의 출력을 결합하기 위해 아래와 같이 가중합 메커니즘을 사용한다:
+- <a title="To combine the output from the off-the-shelf module Tofs(·) and the extension module Text(·), we use a weighted sum mechanism as below:" >🪶</a> off-the-shelf 모듈 $$T_{ofs}(\cdot)$$와 확장 모듈 $$T_{ext}(\cdot)$$의 출력을 결합하기 위해 아래와 같이 가중합 메커니즘을 사용한다:
 
 $$
 H^{l+1} = T_{ofs}(H^l) \cdot \sigma(w(H^l))+T_{ext}(H^l)\cdot(1-\sigma(w(H^l)))
 $$
 
-- <a title="where Hl is the output of l-th layer and w is the weighting block, a fully-connected layer with size 768 × 1 that outputs the weight used to do a weighted summation of embedding vectors from the two modules." >🪶</a> 여기서 $H^l$은 $l$번째 레이어의 출력이며, $w$는 가중 블록으로, 두 모듈에서 임베딩 벡터의 가중 합을 수행하는 데 사용되는 가중치를 출력하는 크기가 768 × 1인 완전히 연결된 레이어이다.
+- <a title="where Hl is the output of l-th layer and w is the weighting block, a fully-connected layer with size 768 × 1 that outputs the weight used to do a weighted summation of embedding vectors from the two modules." >🪶</a> 여기서 $$H^l$$은 $$l$$번째 레이어의 출력이며, $$w$$는 가중 블록으로, 두 모듈에서 임베딩 벡터의 가중 합을 수행하는 데 사용되는 가중치를 출력하는 크기가 768 × 1인 완전히 연결된 레이어이다.
 
-- <a title="To make the output magnitude of the weighting block consistent, a sigmoid function σ(·) is used to constrain the output." >🪶</a> 가중 블록의 출력 크기를 일관되게 만들기 위해 시그모이드 함수 $\sigma(\cdot)$를 사용하여 출력을 제한한다.
+- <a title="To make the output magnitude of the weighting block consistent, a sigmoid function σ(·) is used to constrain the output." >🪶</a> 가중 블록의 출력 크기를 일관되게 만들기 위해 시그모이드 함수 $$\sigma(\cdot)$$를 사용하여 출력을 제한한다.
   - Pointer Generator Networks의 pgn gate와 동일한 연산
 
 - <a title="The size of the extension module is flexible as long as its output shape matches that of the off-the-shelf module." >🪶</a> 확장 모듈의 크기는 출력 형태가 off-the-shelf 모듈의 것과 일치하는 한 유연하다.
@@ -189,7 +189,7 @@ $$
 
 - <a title="During pre-training, this part remains completely fixed, and only the extension module and the weighting block are updated (except for a special experiment related to Figure 3(b))." >🪶</a> 사전 학습 중에 이 부분은 완전히 고정되어 있으며, 확장 모듈과 가중 블록만 업데이트된다(그림 3(b)와 관련된 특수 실험을 제외).
 
-- <a title="Training uses the Adam optimizer (learning rate =1e−04, β1 =0.9, and β2 =0.999) on 4 V100 NVIDIA GPUs. The batch size and input length are set to 256 and 128, respectively." >🪶</a> 학습에는 4개의 V100 NVIDIA GPU에서 Adam 옵티마이저(lr = 1e−04, $\beta_1$ = 0.9 및 $\beta_2$ = 0.999)를 사용합니다. 배치 크기와 입력 길이는 각각 256과 128로 설정된다.
+- <a title="Training uses the Adam optimizer (learning rate =1e−04, β1 =0.9, and β2 =0.999) on 4 V100 NVIDIA GPUs. The batch size and input length are set to 256 and 128, respectively." >🪶</a> 학습에는 4개의 V100 NVIDIA GPU에서 Adam 옵티마이저(lr = 1e−04, $$\beta_1$$ = 0.9 및 $$\beta_2$$ = 0.999)를 사용합니다. 배치 크기와 입력 길이는 각각 256과 128로 설정된다.
 
 - <a title="We construct a biomedical corpus (which we call 17G-Bio in this paper) consisting of 17 GB articles from ClinicalKey (Clinicalkey) (2GB) and PubMed Central (PMC) (15GB)." >🪶</a> ClinicalKey (Clinicalkey) (2GB) 및 PubMed Central (PMC) (15GB)에서 가져온 17GB 논문으로 구성된 생의학 말뭉치를 구축한다(이 논문에서는 17G-Bio라고 한다).
 
@@ -201,7 +201,7 @@ $$
 
 - <a title="In other words, all scores in this paper are models' performance on the downstream tasks." >🪶</a> 다시 말해, 이 논문의 모든 점수는 다운스트림 작업에서의 모델 성능이다.
 
-- <a title="Specifically, all pre-trained models are fine-tuned with the same setting: only the top three layers are fine-tuned with a learning rate of 10−5 and batch size of 20 for 3 epochs on the MTL-Bioinformatics-2016 dataset (MTL)." >🪶</a> 구체적으로, 모든 사전 학습된 모델은 동일한 설정으로 미세 조정된다: 상위 세 개의 레이어만 미세 조정되며, lr은 MTL-Bioinformatics-2016 데이터셋(MTL)에서 배치 크기 20으로 3 에폭 동안 $10^{-5}$입니다.
+- <a title="Specifically, all pre-trained models are fine-tuned with the same setting: only the top three layers are fine-tuned with a learning rate of 10−5 and batch size of 20 for 3 epochs on the MTL-Bioinformatics-2016 dataset (MTL)." >🪶</a> 구체적으로, 모든 사전 학습된 모델은 동일한 설정으로 미세 조정된다: 상위 세 개의 레이어만 미세 조정되며, lr은 MTL-Bioinformatics-2016 데이터셋(MTL)에서 배치 크기 20으로 3 에폭 동안 $$10^{-5}$$입니다.
 
 - <a title="We first examine exBERT pre-trained under a limited corpus (sample randomly 5% data from the 17G-Bio) and computation resources (update model on the sampled corpus for three epochs), as a function of the extension module size." >🪶</a> 먼저 확장 모듈 크기의 함수로 <mark style="background: #eeeeee; color:#3b454e;">제한된 말뭉치(17G-Bio에서 무작위로 5% 데이터 샘플링)</mark>와 계산 리소스(샘플링된 말뭉치에서 모델을 3 에폭에 걸쳐 업데이트)에서 사전 학습된 exBERT를 검토한다.
 
