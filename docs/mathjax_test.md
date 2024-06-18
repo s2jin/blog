@@ -4,7 +4,6 @@ nav_enabled: false
 title: "mathjax 동작 테스트"
 published_date: 2024-06-18
 last_modified_date: 2024-06-18
-parent: Main
 mathjax: true
 ---
 
