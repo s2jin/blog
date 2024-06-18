@@ -1,3 +1,5 @@
+const { SitemapStream, streamToPromise } = require("sitemap")
+
 /** SECRET POST API **/
 function callApi(filename) {
     var inputString = document.getElementById('inputString').value;  // 입력된 문자열 가져오기
