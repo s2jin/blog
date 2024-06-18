@@ -221,3 +221,89 @@ body {
   height: $sp-5;
   color: $link-color;
 }
+
+// for prev & next card
+
+.prev-next {
+  display:flex;
+  margin-left:auto;
+  margin-right:auto
+}
+
+@media (max-width: 768px) {
+  .prev-next {
+    flex-direction: column-reverse;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.prev-div {
+  min-width:0;
+  flex: 1 1 0
+}
+
+@media (max-width: 768px) {
+  .prev-div {
+    flex: initial;
+    width: 100%;
+    min-width:0;
+  }
+}
+
+.next-div {
+  min-width:0;
+  flex: 1 1 0;
+  margin-left: 3rem
+}
+
+@media (max-width: 768px) {
+  .next-div {
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    flex: initial;
+    width: 100%;
+  }
+}
+
+.prev-next-a {
+  cursor:pointer;
+  border-radius: 0.5rem;
+  background: $prev-next-color;
+  width: 100%;
+  padding-left:1rem;
+  padding-right:1rem;
+  height:4rem;
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.prev-next-arrow {
+  width:32px;
+  height:32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:1.5rem;
+  color: $prev-next-arrow-color;
+}
+
+.prev-next-header {
+  font-size:0.75rem;
+  font-weight: bold;
+  color:$prev-next-font-color;
+}
+
+.prev-next-body {
+  width: 100%;
+  font-size: 1.125rem;
+  color:$prev-next-font-color;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0!important;
+}
+
