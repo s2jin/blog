@@ -28,6 +28,20 @@
 {% for child in sorted_pages %}
   <li>
     <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+    {%- if child.has_children==true -%}
+      {%- assign gchild_pages = site[child.collection]
+            | default: site.html_pages
+            | where: "parent", child.title
+            | where: "grand_parent", child.parent -%}
+      <ul>
+      {% for gchild in gchild_pages %}
+        <li>
+          <a href="{{ gchild.url | relative_url }}">{{ gchild.title }}</a>{% if gchild.summary %} - {{ gchild.summary }}{% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+            
+    {%- endif -%}
   </li>
 {% endfor %}
 </ul>
