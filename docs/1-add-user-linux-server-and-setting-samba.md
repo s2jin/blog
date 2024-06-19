@@ -8,6 +8,16 @@ has_children: false
 parent: Main
 ---
 
+<br/>
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-gamma }
+- TOC
+{:toc}
+</details>
+<br/>
 
 ## 01. 리눅스 서버 사용자 추가
 

@@ -1,6 +1,5 @@
 ---
-layout: default
-nav_enabled: false
+layout: minimal
 title: "[논문리뷰] exBERT: Extending Pre-trained Models with Domain-specific Vocabulary Under Constrained Training Resources"
 nav_order: 1
 published_date: 2022-05-17
