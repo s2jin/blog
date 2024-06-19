@@ -5,7 +5,8 @@ nav_order: 2
 published_date: 2023-03-06
 last_modified_date: 2023-03-06
 has_children: false
-parent: Main
+parent: Linux
+grand_parent: Main
 ---
 
 - MacOS에서 저장된 한글 파일들의 자모가 리눅스에서 따로 떨어져나오는 현상이 발생한다.

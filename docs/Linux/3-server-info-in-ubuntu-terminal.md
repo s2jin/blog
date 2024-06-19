@@ -5,8 +5,8 @@ nav_order: 3
 published_date: 2023-08-25
 last_modified_date: 2024-06-19
 has_children: false
-parent: Main
-mathjax: false
+parent: Linux
+grand_parent: Main
 ---
 
 <br/>

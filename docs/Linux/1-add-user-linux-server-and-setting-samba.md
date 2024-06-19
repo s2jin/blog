@@ -5,7 +5,8 @@ nav_order: 1
 published_date: 2023-05-18
 last_modified_date: 2023-05-18
 has_children: false
-parent: Main
+parent: Linux
+grand_parent: Main
 ---
 
 <br/>
