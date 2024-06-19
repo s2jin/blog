@@ -80,7 +80,7 @@ sudo mount -t cifs //100.10.54.90/sujin/m3/data sif_data/ -o username=sujin,uid=
 - uid, gid = (파일을 받아올) 클라이언트에서 접근할 권한 (클라이언트에 있는 아이디의 정보)  
 - (+) passwd = 서버 samba의 비밀번호   
 - 마운트를 하면 클라이언트 서버의 디렉토리를 다른 서버의 디렉토리의 바로가기처럼 만드는 것  
-- 그래서 ==가상환경은 각 서버마다 세팅을 해줘야함==
+- 그래서 <mark style='background: #fff5b1;'>가상환경은 각 서버마다 세팅을 해줘야 함</mark>
 
 ---
 
