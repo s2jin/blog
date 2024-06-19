@@ -62,8 +62,8 @@ sudo mount -t cifs //100.10.54.161/sujin ./eos_m3_small/ -o username=sujin,uid=1
     - ‘ id sujin ‘ → 마운트한 폴더의 소유권자로 설정됨 `user id: group id`
     - ![linux-id-example](../assets/images/linux-id-example.png)  
 
-- ip 주소는 //로 시작하고 디렉토리 주소는 /home/sujin이면 /sujin으로 작성
-- 이 때 /sujin의 `sujin`은 다음 이미지의 `sujin_data2`와 같음
+    - ip 주소는 //로 시작하고 디렉토리 주소는 /home/sujin이면 /sujin으로 작성
+    - 이 때 /sujin의 `sujin`은 다음 이미지의 `sujin_data2`와 같음
 
 | `/etc/samba/smb.conf 설정 내용 중 일부`  |
 |:----------------------------------------:|
