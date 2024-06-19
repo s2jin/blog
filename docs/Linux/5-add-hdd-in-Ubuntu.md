@@ -38,7 +38,7 @@ sudo fdisk -l
 
 | 파티션이 설정된 디스크         | 파티션이 설정되지 않은 디스크     |
 | ------------------------------ | --------------------------------- |
-| ![](../assets/parted_disk.png) | ![](../assets/no_parted_disk.png) |
+| ![](../../assets/parted_disk.png) | ![](../../assets/no_parted_disk.png) |
  
 #### (+) 디스크 네이밍 방법
 
@@ -100,7 +100,7 @@ command 결과:
 
 | 비포                                               | 설정                                               | 애프터                                             |
 | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| ![](../assets/consecutively-additional-partitions-before.png) | ![](../assets/consecutively-additional-partitions-setting.png) | ![](../assets/consecutively-additional-partitions-after.png) |
+| ![](../../assets/consecutively-additional-partitions-before.png) | ![](../../assets/consecutively-additional-partitions-setting.png) | ![](../../assets/consecutively-additional-partitions-after.png) |
 
 
 ## 03. 포맷
