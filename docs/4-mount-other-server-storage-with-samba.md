@@ -19,7 +19,7 @@ mathjax: false
 
 ## 서버 연결
 
-1. 참조되는 서버에 samba 설치 및 **[유저 추가]([1-add-user-linux-server-and-setting-samba](1-add-user-linux-server-and-setting-samba.md))**
+1. 참조되는 서버에 samba 설치 및 **[유저 추가](1-add-user-linux-server-and-setting-samba.md)**
 
 2. 클라이언트에 samba, cifs-utils, smbclient 설치
 
@@ -49,13 +49,13 @@ sudo mount -t cifs //100.10.54.161/sujin ./eos_m3_small/ -o username=sujin,uid=1
 ```
 - uid, gid는 클라이언트에서 확인
     - ‘ id sujin ‘ → 마운트한 폴더의 소유권자로 설정됨 `user id: group id`
-    - ![](linux-id-example.png)
+    - ![linux-id-example](../assets/images/linux-id-example.png)
 - ip 주소는 //로 시작하고 디렉토리 주소는 /home/sujin이면 /sujin으로 작성
 - 이 때 /sujin의 `sujin`은 다음 이미지의 `sujin_data2`와 같음
 
 | `/etc/samba/smb.conf 설정 내용 중 일부`  |
 |:----------------------------------------:|
-| ![](linux-smb-conf-setting-example.png) |
+| ![linux-id-example](../assets/images/linux-smb-conf-setting-example.png) |
 
 7. (다른 예시) `/mnt/data1/sujin`을 마운트
     1. server: sif / client: thor  
