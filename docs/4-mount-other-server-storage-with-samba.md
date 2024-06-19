@@ -9,6 +9,17 @@ parent: Main
 mathjax: false
 ---
 
+<br/>
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-gamma }
+- TOC
+{:toc}
+</details>
+<br/>
+
 ## 배경
 
 딥러닝 모델 학습을 하고 있는 서버에서의 GPU는 모두 사용 중이고,  
@@ -49,7 +60,7 @@ sudo mount -t cifs //100.10.54.161/sujin ./eos_m3_small/ -o username=sujin,uid=1
 ```
 - uid, gid는 클라이언트에서 확인
     - ‘ id sujin ‘ → 마운트한 폴더의 소유권자로 설정됨 `user id: group id`
-    - ![linux-id-example](../assets/images/linux-id-example.png)
+    - ![linux-id-example](../assets/images/linux-id-example.png)  
 - ip 주소는 //로 시작하고 디렉토리 주소는 /home/sujin이면 /sujin으로 작성
 - 이 때 /sujin의 `sujin`은 다음 이미지의 `sujin_data2`와 같음
 
